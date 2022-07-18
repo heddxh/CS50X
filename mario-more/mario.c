@@ -3,7 +3,15 @@
 
 int main(void)
 {
-    do 
-    int height = get_int("Height: ");
+    int h
+    do
+    {
+        h = get_int("Height: ");
+    }
+    while (n > 1); //ensure a valid input
 
+    for (int i = 0, i < h, i++)
+    {
+        
+    }
 }
