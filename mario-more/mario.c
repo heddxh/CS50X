@@ -10,8 +10,10 @@ int main(void)
     }
     while (n > 1); //ensure a valid input
 
-    for (int i = 0, i < h, i++)
+    for (int i = 1, i < h+1, i++)
     {
-        
+        for (int j = 0, )
+        printf(" ");
+        printf("#");
     }
 }
