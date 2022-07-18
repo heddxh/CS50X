@@ -12,8 +12,11 @@ int main(void)
 
     for (int i = 1, i < h+1, i++)
     {
-        for (int j = 0, )
-        printf(" ");
+        for (int j = 1, j < h - i + 1, j++)
+        {
+            printf(" ");
+        }
+
         printf("#");
     }
 }
