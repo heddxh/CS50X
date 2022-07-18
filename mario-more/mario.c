@@ -3,12 +3,12 @@
 
 int main(void)
 {
-    int h
+    int h;
     do
     {
         h = get_int("Height: ");
     }
-    while (n > 1); //ensure a valid input
+    while (h > 1); //ensure a valid input
 
     for (int i = 1, i < h+1, i++)
     {
