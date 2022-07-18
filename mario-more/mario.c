@@ -10,7 +10,7 @@ int main(void)
     }
     while (h > 1); //ensure a valid input
 
-    for (int i = 1, i < h+1, i++)
+    for (int i = 1, i < h + 1, i++)
     {
         for (int j = 1, j < h - i + 1, j++)
         {
