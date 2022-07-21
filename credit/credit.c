@@ -45,13 +45,24 @@ int main(void)
     {
         if (start2 == 34 || start2 == 37)
         {
-            printf{"AMEX\n"};
+            printf("AMEX\n");
         }
         else
         {
            printf("INVALID\n");
         }
-    else if ()
+    else if (start1 == 4)
+    {
+        if (length == 13 || length == 16)
+        {
+            printf("VISA\n");
+        }
+        else
+        {
+            printf("INVALID\n");
+        }
+    }
+    else if
     }
 
 }
