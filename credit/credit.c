@@ -9,7 +9,10 @@ int main(void)
     // user input
     long numbers = get_numbers();
 
-    // auth
+    // calculate
+    int sum = multiply_sum(numbers);
+
+    // plus remain digits
 
 
 }
@@ -28,10 +31,30 @@ long get_numbers(void)
 int multiply_sum(long numbers)
 {
     int sum;
+    int digit;
     while(numbers >= 10)
     {
         numbers = numbers / 10;
-        sum = sum + numbers % 10 *2;
+        digit = numbers % 10;
+        numbers = numbers / 10;
+        if (digit * 2 > 9)
+        {
+            sum = sum + digit * 2 / 10 + digit * 2 % 10;
+        }
+        else
+        {
+            sum = sum + digit * 2;
+        }
         return sum;
+    }
+}
+
+int remain_sum(long numbers)
+{
+    int digit;
+    while(numbers >= 10)
+    {
+        digit = numbers % 10;
+        numbers = numbers / 100;
     }
 }
