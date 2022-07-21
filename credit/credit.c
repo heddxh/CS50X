@@ -31,11 +31,11 @@ int main(void)
         }
     }
 
-    printf("%i\n", length);
-    printf("%i\n", start);
-    printf("%i\n", sum1);
-    printf("%i\n", sum2);
-    printf("%i\n", result);
+    // printf("%i\n", length);
+    // printf("%i\n", start);
+    // printf("%i\n", sum1);
+    // printf("%i\n", sum2);
+    //printf("%i\n", result);
 
     // judge
     if(result % 10 == 0)
@@ -100,6 +100,7 @@ int remain_sum(long number)
     {
         digit = number % 10;
         number = number / 100;
+        printf("%i\n, digit");
         sum = sum + digit;
     }
     return sum;
