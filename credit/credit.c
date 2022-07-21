@@ -96,7 +96,7 @@ int remain_sum(long number)
 {
     int digit;
     int sum;
-    printf("%i\n", sum);
+    printf("%i\n", digit);
     while(number > 0)
     {
         digit = number % 10;
