@@ -29,7 +29,10 @@ int main(void)
     // judge
     if(result % 10 = 0)
     {
-        if
+        if(length = 15)
+        {
+            printf("AMEX\n");
+        }
     }
 
 }
