@@ -6,9 +6,12 @@ long get_numbers(void);
 
 int main(void)
 {
-  long numbers = get_numbers();
+    // user input
+    long numbers = get_numbers();
 
-  
+    // auth
+
+
 }
 
 long get_numbers(void)
@@ -21,3 +24,4 @@ long get_numbers(void)
     while(numbers < 0);
     return numbers;
 }
+
