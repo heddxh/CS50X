@@ -2,6 +2,8 @@
 #include <stdio.h>
 
 long get_numbers(void);
+int multiply_sum(long numbers);
+int remain_sum(long numbers);
 
 
 int main(void)
@@ -10,10 +12,17 @@ int main(void)
     long numbers = get_numbers();
 
     // calculate
-    int sum = multiply_sum(numbers);
+    int sum1 = multiply_sum(numbers);
+    int sum2 = remain_sum(numbers);
 
-    // plus remain digits
+    // plus
+    int result = sum1 + sum2
 
+    // judge
+    if(result % 10 = 0)
+    {
+        if
+    }
 
 }
 
@@ -52,9 +61,12 @@ int multiply_sum(long numbers)
 int remain_sum(long numbers)
 {
     int digit;
+    int sum;
     while(numbers >= 0)
     {
         digit = numbers % 10;
         numbers = numbers / 100;
+        sum = sum + digit
     }
+    return sum;
 }
