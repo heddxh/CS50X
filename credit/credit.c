@@ -28,7 +28,7 @@ long get_numbers(void)
 int multiply_result(long numbers)
 {
     int digit;
-    while(???)
+    while(numbers >= 10)
     {
         numbers = numbers / 10;
         digit = numbers % 10;
