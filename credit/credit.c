@@ -27,10 +27,11 @@ long get_numbers(void)
 
 int multiply_sum(long numbers)
 {
-    int digit;
+    int sum;
     while(numbers >= 10)
     {
         numbers = numbers / 10;
-        digit = digit + numbers % 10 *2;
+        sum = sum + numbers % 10 *2;
+        return sum;
     }
 }
