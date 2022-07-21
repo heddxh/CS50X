@@ -33,6 +33,8 @@ int main(void)
 
     printf("%i\n", length);
     printf("%i\n", start);
+    printf("%i\n", sum1);
+    printf("%i\n", sum2);
     printf("%i\n", result);
 
     // judge
