@@ -34,7 +34,7 @@ int main(void)
     // printf("%i\n", length);
     // printf("%i\n", start);
     // printf("%i\n", sum1);
-     printf("%i\n", sum2);
+    // printf("%i\n", sum2);
     //printf("%i\n", result);
 
     // judge
@@ -95,7 +95,8 @@ int multiply_sum(long number)
 int remain_sum(long number)
 {
     int digit;
-    int sum = 0;
+    int sum;
+    printf("%i\n", sum);
     while(number > 0)
     {
         digit = number % 10;
