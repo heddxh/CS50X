@@ -20,36 +20,38 @@ int main(void)
 
     // mount length & detect start
     int length = 0;
-    int start;
+    int start1;
+    int start2;
     while(number > 0)
     {
         length++;
         number = number / 10;
+        if(number < 100 && number >= 10)
+        {
+            start2 = number;
+        }
         if (number < 10 && number > 0)
         {
-            start = number;
+            start1 = number;
         }
     }
 
     // judge
-    if(result % 10 == 0 && (length == 15 || length == 13 || length == 16))
+    if (result % 10 != 0)
     {
-        if(length == 15)
+        printf("INVALID\n");
+    }
+    else if (length == 15)
+    {
+        if (start2 == 34 || start2 == 37)
         {
-            printf("AMEX\n");
-        }
-        else if (start == 4)
-        {
-            printf("VISA\n");
+            printf{"AMEX\n"};
         }
         else
         {
-            printf("MASTERCARD\n");
+           printf("INVALID\n");
         }
-    }
-    else
-    {
-        printf("INVALID\n");
+    else if ()
     }
 
 }
