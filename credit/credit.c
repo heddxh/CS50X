@@ -22,11 +22,11 @@ int main(void)
     int length = 0;
     int start1;
     int start2;
-    while(number > 0)
+    while (number > 0)
     {
         length++;
         number = number / 10;
-        if(number < 100 && number >= 10)
+        if (number < 100 && number >= 10)
         {
             start2 = number;
         }
@@ -49,7 +49,7 @@ int main(void)
         }
         else
         {
-           printf("INVALID\n");
+            printf("INVALID\n");
         }
     }
     else if (start1 == 4)
@@ -83,7 +83,7 @@ long get_number(void)
     {
         number = get_long("Number: ");
     }
-    while(number < 0);
+    while (number < 0);
     return number;
 }
 
@@ -91,7 +91,7 @@ int multiply_sum(long number)
 {
     int sum = 0;
     int digit = 0;
-    while(number >= 10)
+    while (number >= 10)
     {
         number = number / 10;
         digit = number % 10;
@@ -112,7 +112,7 @@ int remain_sum(long number)
 {
     int digit = 0;
     int sum = 0;
-    while(number > 0)
+    while (number > 0)
     {
         digit = number % 10;
         number = number / 100;
