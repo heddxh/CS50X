@@ -51,6 +51,7 @@ int main(void)
         {
            printf("INVALID\n");
         }
+    }
     else if (start1 == 4)
     {
         if (length == 13 || length == 16)
@@ -62,9 +63,17 @@ int main(void)
             printf("INVALID\n");
         }
     }
-    else if
+    else if (start2 == 51 || start2 == 52 || start2 == 53 || start2 == 54 || start2 == 55)
+    {
+        if (length == 16)
+        {
+            printf("MASTERCARD\n");
+        }
     }
-
+    else
+    {
+        printf("INVALID\n");
+    }
 }
 
 long get_number(void)
