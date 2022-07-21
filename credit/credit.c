@@ -29,6 +29,7 @@ int multiply_result(long numbers)
 {
     while(???)
     {
-        numbers 
+        numbers = numbers / 10
+        
     }
 }
