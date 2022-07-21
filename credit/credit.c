@@ -52,7 +52,7 @@ int multiply_sum(long numbers)
 int remain_sum(long numbers)
 {
     int digit;
-    while(numbers >= 10)
+    while(numbers >= 0)
     {
         digit = numbers % 10;
         numbers = numbers / 100;
