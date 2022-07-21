@@ -33,6 +33,7 @@ int main(void)
 
     printf("%i\n", length);
     printf("%i\n", start);
+    printf("%i\n", result);
 
     // judge
     if(result % 10 == 0)
