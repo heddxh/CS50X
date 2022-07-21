@@ -32,7 +32,7 @@ int main(void)
     }
 
     // judge
-    if(result % 10 == 0 && length == 15)
+    if(result % 10 == 0 && (length == 15 || length == 13 || length == 16))
     {
         if(length == 15)
         {
