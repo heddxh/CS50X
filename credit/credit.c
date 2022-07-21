@@ -25,12 +25,12 @@ long get_numbers(void)
     return numbers;
 }
 
-int multiply_result(long numbers)
+int multiply_sum(long numbers)
 {
     int digit;
     while(numbers >= 10)
     {
         numbers = numbers / 10;
-        digit = numbers % 10;
+        digit = digit + numbers % 10 *2;
     }
 }
