@@ -13,10 +13,13 @@ int main(void)
 
     // calculate
     int sum1 = multiply_sum(number);
+    printf("%i\n", sum1);
     int sum2 = remain_sum(number);
+    printf("%i\n", sum2);
 
     // plus
     int result = sum1 + sum2;
+    printf("%i\n", result);
 
     // mount length
     int length = 0;
@@ -25,9 +28,11 @@ int main(void)
         length++;
         number = number / 10;
     }
+    printf("%i\n", length);
 
     // judge
     int start = number / (10 ^ (length - 1));
+    printf("%i\n", start);
     if(result % 10 == 0)
     {
         if(length == 15)
