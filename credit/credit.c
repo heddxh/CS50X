@@ -16,24 +16,36 @@ int main(void)
     int sum2 = remain_sum(number);
 
     // plus
-    int result = sum1 + sum2
+    int result = sum1 + sum2;
 
     // mount length
     int length = 0;
     while(number > 0)
     {
         length++;
-        number = number / 10
+        number = number / 10;
     }
 
     // judge
-    if(result % 10 = 0)
+    int start = number / (10 ^ (length - 1));
+    if(result % 10 == 0)
     {
-        if(length = 15)
+        if(length == 15)
         {
             printf("AMEX\n");
         }
-        else if ()
+        else if (start == 4)
+        {
+            printf("VISA\n");
+        }
+        else
+        {
+            printf("MASTERCARD\n");
+        }
+    }
+    else
+    {
+        printf("INVALID\n");
     }
 
 }
