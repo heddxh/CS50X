@@ -53,25 +53,43 @@ int calculate_quarters(int cents)
     while (remain >= 0)
     {
         n++;
-        remain = remain - 25
+        remain = remain - 25;
     }
     return n;
 }
 
 int calculate_dimes(int cents)
 {
-    // TODO
-    return 0;
+    int remain = cents;
+    int n =0;
+    while (remain >= 0)
+    {
+        n++;
+        remain = remain - 10;
+    }
+    return n;
 }
 
 int calculate_nickels(int cents)
 {
-    // TODO
-    return 0;
+    int remain = cents;
+    int n =0;
+    while (remain >= 0)
+    {
+        n++;
+        remain = remain - 5;
+    }
+    return n;
 }
 
 int calculate_pennies(int cents)
 {
-    // TODO
-    return 0;
+    int remain = cents;
+    int n =0;
+    while (remain >= 0)
+    {
+        n++;
+        remain = remain - 1;
+    }
+    return n;
 }
