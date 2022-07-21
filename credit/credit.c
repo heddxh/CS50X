@@ -95,13 +95,14 @@ int multiply_sum(long number)
 int remain_sum(long number)
 {
     int digit;
-    int sum;
+    int sum = 0;
     while(number > 0)
     {
         digit = number % 10;
         number = number / 100;
         printf("%i\n", digit);
         sum = sum + digit;
+        printf("%i\n", sum);
     }
     return sum;
 }
