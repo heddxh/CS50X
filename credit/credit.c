@@ -73,8 +73,8 @@ long get_number(void)
 
 int multiply_sum(long number)
 {
-    int sum;
-    int digit;
+    int sum = 0;
+    int digit = 0;
     while(number >= 10)
     {
         number = number / 10;
@@ -94,16 +94,13 @@ int multiply_sum(long number)
 
 int remain_sum(long number)
 {
-    int digit;
-    int sum;
-    printf("%i\n", digit);
+    int digit = 0;
+    int sum = 0;
     while(number > 0)
     {
         digit = number % 10;
         number = number / 100;
-        printf("%i\n", digit);
         sum = sum + digit;
-        printf("%i\n", sum);
     }
     return sum;
 }
