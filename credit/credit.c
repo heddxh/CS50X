@@ -25,3 +25,7 @@ long get_numbers(void)
     return numbers;
 }
 
+int multiply_result(long numbers)
+{
+    
+}
