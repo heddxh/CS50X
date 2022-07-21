@@ -27,5 +27,8 @@ long get_numbers(void)
 
 int multiply_result(long numbers)
 {
-    
+    while(???)
+    {
+        numbers 
+    }
 }
