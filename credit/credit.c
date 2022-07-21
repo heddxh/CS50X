@@ -100,7 +100,7 @@ int remain_sum(long number)
     {
         digit = number % 10;
         number = number / 100;
-        printf("%i\n, digit");
+        printf("%i\n", digit);
         sum = sum + digit;
     }
     return sum;
