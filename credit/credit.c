@@ -78,8 +78,8 @@ int multiply_sum(long number)
         {
             sum = sum + digit * 2;
         }
-        return sum;
     }
+    return sum;
 }
 
 int remain_sum(long number)
@@ -90,7 +90,7 @@ int remain_sum(long number)
     {
         digit = number % 10;
         number = number / 100;
-        sum = sum + digit
+        sum = sum + digit;
     }
     return sum;
 }
