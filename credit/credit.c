@@ -25,7 +25,7 @@ int main(void)
     {
         length++;
         number = number / 10;
-        if (number < 10)
+        if (number < 10 && number > 0)
         {
             start = number;
         }
