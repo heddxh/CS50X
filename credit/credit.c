@@ -33,6 +33,7 @@ int main(void)
         {
             printf("AMEX\n");
         }
+        else if ()
     }
 
 }
