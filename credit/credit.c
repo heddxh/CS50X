@@ -18,16 +18,23 @@ int main(void)
     // plus
     int result = sum1 + sum2;
 
-    // mount length
+    // mount length & detect start
     int length = 0;
+    int start;
     while(number > 0)
     {
         length++;
         number = number / 10;
+        if (number < 10)
+        {
+            start = number;
+        }
     }
 
+    printf("%i\n", length);
+    printf("%i\n", start);
+
     // judge
-    int start = number / (10  (length - 1));
     if(result % 10 == 0)
     {
         if(length == 15)
