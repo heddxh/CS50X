@@ -37,7 +37,6 @@ int main(void)
 
 int get_cents(void)
 {
-    // user input
     int cents;
     do
     {
