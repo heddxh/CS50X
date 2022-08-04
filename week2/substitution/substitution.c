@@ -4,8 +4,8 @@
 
 int main(int argc, string argv[])
 {
-    if (strlen(argv[1]) == \0)
+    if (strlen(argv[1]) == null)
     {
-        printf
+        printf("123");
     }
 }
