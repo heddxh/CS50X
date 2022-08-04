@@ -17,6 +17,17 @@ int main(int argc, string argv[])
     }
 
     string raw = get_string("plaintext: ");
-    
+    string key = argv[1];
+    string cip;
+    for (int i = 0, n = strlen(raw); i < n; i++)
+    {
+        if (isalpha(raw[i]))
+        {
+            if(islower(raw[i]))
+            {
+                cip[i] = 
+            }
+        }
+    }
 
 }
