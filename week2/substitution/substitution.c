@@ -54,6 +54,7 @@ int is_string_alpha(string s)
         {
             return 1;
         }
+        return 0;
     }
 }
 
@@ -69,4 +70,5 @@ int is_string_repetition(string s)
             return 1;
         }
     }
+    return 0;
 }
