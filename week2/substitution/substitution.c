@@ -4,7 +4,7 @@
 #include <ctype.h>
 
 int is_string_alpha(string s);
-int is_string_(string s);
+int is_string_repetition(string s);
 
 int main(int argc, string argv[])
 {
@@ -56,4 +56,9 @@ int is_string_alpha(string s)
             return 1;
         }
     }
+}
+
+int is_string_repetition(string s)
+{
+    n
 }
