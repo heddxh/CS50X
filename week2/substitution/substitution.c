@@ -4,7 +4,7 @@
 
 int main(int argc, string argv[])
 {
-    if (strlen(argv[1]) == null)
+    if (argv[1] == (null))
     {
         printf("123");
     }
