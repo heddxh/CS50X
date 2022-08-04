@@ -4,8 +4,8 @@
 
 int main(int argc, string argv[])
 {
-    if (argv[1] == (null))
+    if (argv[1] == NULL)
     {
-        printf("123");
+        printf("");
     }
 }
