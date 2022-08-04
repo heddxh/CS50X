@@ -11,9 +11,9 @@ int count_sentences(string text);
 int main(void)
 {
     string text = get_string("Text: ");
-    int l = get_letters(text);
-    int w = get_words(text);
-    int s = get_sentences(text);
+    int l = count_letters(text);
+    int w = count_words(text);
+    int s = count_sentences(text);
 
     float L = l / (w / 100.0);
     float S = s / (w / 100.0);
@@ -22,15 +22,15 @@ int main(void)
 
     if (index >= 16)
     {
-        printf("Grade 16+");
+        printf("Grade 16+\n");
     }
     else if (index < 1)
     {
-        printf("Before Grade 1");
+        printf("Before Grade 1\n");
     }
     else
     {
-        prin
+        printf("Grade %i\n", round(index));
     }
 }
 
