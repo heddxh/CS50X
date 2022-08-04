@@ -4,7 +4,7 @@
 
 int main(int argc, string argv[])
 {
-    if (strlen(argv[1]) != 26)
+    if (strlen(argv[1]) == )
     {
         printf
     }
