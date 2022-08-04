@@ -15,6 +15,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    string ptxt = get_string("plaintext: ");
     
 
 }
