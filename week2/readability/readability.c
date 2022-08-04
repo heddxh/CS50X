@@ -16,7 +16,7 @@ int main(void)
     int s = get_sentences(text);
 
     float L = l / (w / 100.0);
-    
+    float S = s / (w / 100.0);
 }
 
 int count_letters(string text)
