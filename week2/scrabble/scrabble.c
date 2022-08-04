@@ -30,7 +30,9 @@ int compute_score(string word)
 
     while (int isalpha(word[i]) != 0)
     {
-        word[i] - 
+        //All lowercase
+        
+        word[i] -
         sum = sum +
     }
 }
