@@ -32,7 +32,7 @@ int compute_score(string word)
     {
         //All lowercase
         char c = tolower(word[i]);
-        word[i] - 
+        c - 97
         sum = sum +
     }
 }
