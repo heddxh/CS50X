@@ -25,5 +25,12 @@ int compute_score(string word)
 {
     // Compute and return score for string
     len = strlen(word);
-    while (word(i) == )
+    int sum = 0;
+    int i = 0;
+
+    while (int isalpha(word[i]) != 0)
+    {
+        word[i] - 
+        sum = sum +
+    }
 }
