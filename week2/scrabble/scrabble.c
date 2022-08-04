@@ -46,6 +46,7 @@ int compute_score(string word)
         char c = tolower(word[i]);
         int index = c - 97;
         sum = sum + POINTS[index];
+        i++;
     }
     return sum;
 }
