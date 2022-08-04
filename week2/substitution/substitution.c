@@ -25,7 +25,7 @@ int main(int argc, string argv[])
         {
             if(islower(raw[i]))
             {
-                cip[i] = 
+                cip[i] = raw[i]
             }
         }
     }
