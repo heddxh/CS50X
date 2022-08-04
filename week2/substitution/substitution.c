@@ -66,7 +66,7 @@ int is_string_repetition(string s)
     {
         int index = tolower(s[i]);
         cnt[index]++;
-        if (cnt[index] = 2)
+        if (cnt[index] == 2)
         {
             return 1;
         }
