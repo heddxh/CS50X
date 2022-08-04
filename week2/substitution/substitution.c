@@ -3,6 +3,9 @@
 #include <string.h>
 #include <ctype.h>
 
+int is_string_alpha(string s);
+int is_string_(string s);
+
 int main(int argc, string argv[])
 {
     if (argc != 2)
@@ -42,4 +45,15 @@ int main(int argc, string argv[])
     }
 
     printf("ciphertext: %s\n", cip);
+}
+
+int is_string_alpha(string s)
+{
+    for (int i = 0, n = strlen(s); i < n; i++)
+    {
+        if (isalpha(s[i]) == 0)
+        {
+            return 1;
+        }
+    }
 }
