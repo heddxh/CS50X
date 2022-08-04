@@ -8,8 +8,8 @@ int count_words(string text);
 int main(void)
 {
     string text = get_string("Text: ");
-    
-    printf("count words: %c\n", count_words(text));
+    int count = count_words(text);
+    printf("count words: %c\n", count);
 
 }
 
