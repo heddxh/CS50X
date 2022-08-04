@@ -54,18 +54,19 @@ int is_string_alpha(string s)
         {
             return 1;
         }
-        return 0;
+
     }
+    return 0;
 }
 
 int is_string_repetition(string s)
 {
-    int n[26] = 0;
+    int cnt[26];
     for (int i = 0, n = strlen(s); i < n; i++)
     {
         int index = tolower(s[i]);
-        n[index]++;
-        if (n[index] = 2)
+        cnt[index]++;
+        if (cnt[index] = 2)
         {
             return 1;
         }
