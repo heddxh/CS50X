@@ -61,7 +61,7 @@ int is_string_alpha(string s)
 
 int is_string_repetition(string s)
 {
-    int cnt[26];
+    int cnt[26] = 0;
     for (int i = 0, n = strlen(s); i < n; i++)
     {
         int index = tolower(s[i]);
