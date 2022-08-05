@@ -26,7 +26,7 @@ int main(int argc, string argv[])
     {
         if (isalpha(raw[i]))
         {
-            if(islower(raw[i]))
+            if (islower(raw[i]))
             {
                 int index = raw[i] - 97;
                 cip[i] = tolower(key[index]);
