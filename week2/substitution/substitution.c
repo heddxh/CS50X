@@ -13,7 +13,7 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    else if (strlen(argv[1]) != 26 || is_string_alpha(argv[1]) == 1 || is_string_repetition(argv[1]))
+    else if (strlen(argv[1]) != 26 || is_string_alpha(argv[1]) == 1 || is_string_repetition(argv[1]) == 1)
     {
         printf("Key must contain 26 characters.\n");
         return 1;
@@ -61,7 +61,7 @@ int is_string_alpha(string s)
 
 int is_string_repetition(string s)
 {
-    int cnt[26] = 0;
+    int cnt[26];
     for (int i = 0, n = strlen(s); i < n; i++)
     {
         int index = tolower(s[i]);
@@ -71,5 +71,5 @@ int is_string_repetition(string s)
             return 1;
         }
     }
-    return 0;
+    return 0; // No repetition
 }
