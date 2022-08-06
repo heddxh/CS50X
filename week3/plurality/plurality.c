@@ -68,13 +68,13 @@ bool vote(string name)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(name, candidate[].name)) // Not include
+        if (strcmp(name, candidate[i].name)) // Not include
         {
             return true;
         }
         else
         {
-            candidate.votes
+            candidate[i].votes++:
         }
     }
     return false;
