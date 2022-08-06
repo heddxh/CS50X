@@ -81,11 +81,12 @@ bool vote(string name)
 void print_winner(void)
 {
     // Merge sort for candidate.votes
-    
+    int n = candidate_count;
+
     return;
 }
 
-void merge(void)
+void merge_sort(void)
 {
-    if
+    
 }
