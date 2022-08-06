@@ -80,13 +80,14 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    // Merge sort for candidate.votes
-    int n = candidate_count;
+    int max = 0;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidate.votes > max)
+        {
+            max = candidate.votes;
+        }
+    }
 
     return;
-}
-
-void merge_sort(void)
-{
-    
 }
