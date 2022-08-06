@@ -1,12 +1,12 @@
-sort1 uses: TODO
+sort1 uses: selection sort
 
-How do you know?:
+How do you know?: random10000:0.369 MORE --> selection sort
 
 sort2 uses: bubble sort
 
 How do you know?: sorted10000:0.066 LEAST --> bubble sort
 
-sort3 uses: TODO
+sort3 uses: merge sort
 
-How do you know?: 
+How do you know?: random10000:0.184 LESS than sort1 --> merge sort
 
