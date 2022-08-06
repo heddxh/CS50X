@@ -84,3 +84,8 @@ void print_winner(void)
     
     return;
 }
+
+void merge(void)
+{
+    if
+}
