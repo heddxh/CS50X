@@ -129,7 +129,7 @@ void add_pairs(void)
 {
     for (int i = 0; i < candidate_count - 1; i++)
     {
-        for (int j = 1; j < candidate_count; j++) // TODO 好像可以优化这个地方
+        for (int j = 1; j < candidate_count; j++)
         {
             if (preferences[i][j] > preferences[i][j])
             {
