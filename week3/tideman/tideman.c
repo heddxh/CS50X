@@ -169,9 +169,19 @@ void sort_pairs(void)
 }
 
 // Determine whether the next pair will cause a cycle or not
-bool will_cycle(pair pair)
+bool will_cycle(int winner, int loser)
 {
-    
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (locked[loser][i])
+        {
+            if (will_cycle(winner, i))
+            {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 
