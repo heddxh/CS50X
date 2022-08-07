@@ -176,7 +176,7 @@ bool will_cycle(int winner, int loser)
     {
         if (locked[loser][i])
         {
-            if (locked[i])
+            if (locked[i][winner])
             {
                 return true;
             }
