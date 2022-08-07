@@ -146,8 +146,7 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // Selection sort
-    int tmp;
-    int tmp2;
+    pair tmp;
     int k;
     for (int i = 0; i < pair_count; i++)
     {
@@ -162,9 +161,9 @@ void sort_pairs(void)
             }
         }
         // Swap
-        tmp = preferences[pairs[i].winner][pairs[i].loser];
-        preferences[pairs[i].winner][pairs[i].loser] = min;
-        preferences[pairs[k].winner][pairs[k].loser] = tmp;
+        tmp = pairs[i];
+        pairs[i] = pairs[k];
+        pairs[k] = tmp;
     }
     return;
 }
@@ -172,7 +171,10 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    // TODO
+    for (int i = 0; i < pair_count; i++)
+    {
+        if ()
+    }
     return;
 }
 
