@@ -146,8 +146,9 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // Selection sort
-    int tmp1;
+    int tmp;
     int tmp2;
+    int k;
     for (int i = 0; i < pair_count; i++)
     {
         int min = preferences[pairs[i].winner][pairs[i].loser];
@@ -157,10 +158,13 @@ void sort_pairs(void)
             if (min > preferences[pairs[j].winner][pairs[j].loser])
             {
                 min = preferences[pairs[j].winner][pairs[j].loser];
+                k = j;
             }
         }
         // Swap
-        
+        tmp = preferences[pairs[i].winner][pairs[i].loser];
+        preferences[pairs[i].winner][pairs[i].loser] = min;
+        preferences[pairs[k].winner][pairs[k].loser] = tmp;
     }
     return;
 }
