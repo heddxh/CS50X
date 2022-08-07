@@ -152,7 +152,7 @@ void sort_pairs(void)
     {
         int min = preferences[pairs[i].winner][pairs[i].loser];
         // Find smallest
-        for (int j = i; j < pair_count; j++)
+        for (int j = i + 1; j < pair_count; j++)
         {
             if (min > preferences[pairs[j].winner][pairs[j].loser])
             {
