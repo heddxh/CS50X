@@ -31,6 +31,7 @@ bool vote(int rank, string name, int ranks[]);
 void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
+bool will_cycle(int winner, int loser);
 void lock_pairs(void);
 void print_winner(void);
 
@@ -191,7 +192,10 @@ void lock_pairs(void)
     for (int i = 0; i < pair_count; i++)
     {
         // Determine whether the next pair will cause a cycle or not
-        if ()
+        if (!will_cycle(pairs[i].winner, pairs[i].loser))
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+        }
     }
     return;
 }
@@ -199,6 +203,6 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
+    for (int i = 0)
     return;
 }
