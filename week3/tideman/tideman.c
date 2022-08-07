@@ -133,8 +133,8 @@ void add_pairs(void)
         {
             if (preferences[i][j] > preferences[i][j])
             {
-                pairs[pair_count].winner = candidates[i];
-                pairs[pair_count].loser = candidate[j];
+                pairs[pair_count].winner = i;
+                pairs[pair_count].loser = j;
                 pair_count++;
             }
         }
@@ -145,7 +145,23 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    
+    // Selection sort
+    int tmp1;
+    int tmp2;
+    for (int i = 0; i < pair_count; i++)
+    {
+        int min = preferences[pairs[i].winner][pairs[i].loser];
+        // Find smallest
+        for (int j = i; j < pair_count; j++)
+        {
+            if (min > preferences[pairs[j].winner][pairs[j].loser])
+            {
+                min = preferences[pairs[j].winner][pairs[j].loser];
+            }
+        }
+        // Swap
+        
+    }
     return;
 }
 
