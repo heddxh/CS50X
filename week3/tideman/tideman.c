@@ -168,6 +168,13 @@ void sort_pairs(void)
     return;
 }
 
+// Determine whether the next pair will cause a cycle or not
+bool will_cycle(pair pair)
+{
+    
+}
+
+
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
