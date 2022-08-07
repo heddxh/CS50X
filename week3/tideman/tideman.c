@@ -132,7 +132,7 @@ void add_pairs(void)
     {
         for (int j = 1; j < candidate_count; j++)
         {
-            if (preferences[i][j] > preferences[i][j])
+            if (preferences[i][j] > preferences[j][i])
             {
                 pairs[pair_count].winner = i;
                 pairs[pair_count].loser = j;
@@ -176,7 +176,7 @@ bool will_cycle(int winner, int loser)
     {
         if (locked[loser][i])
         {
-            if (locked(i, winner))
+            if (locked[i])
             {
                 return true;
             }
