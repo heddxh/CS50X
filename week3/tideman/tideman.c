@@ -11,6 +11,8 @@ int preferences[MAX][MAX];
 // locked[i][j] means i is locked in over j
 bool locked[MAX][MAX];
 
+int locked_count = 0;
+
 // Each pair has a winner, loser
 typedef struct
 {
@@ -195,6 +197,7 @@ void lock_pairs(void)
         if (!will_cycle(pairs[i].winner, pairs[i].loser))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
+            locked_count++;
         }
     }
     return;
@@ -203,6 +206,9 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    for (int i = 0)
+    for (int i = 0; i < locked_count; i++)
+    {
+        for (int j = )
+    }
     return;
 }
