@@ -151,14 +151,14 @@ void sort_pairs(void)
     int k;
     for (int i = 0; i < pair_count; i++)
     {
-        int min = preferences[pairs[i].winner][pairs[i].loser];
+        int max = preferences[pairs[i].winner][pairs[i].loser];
         k = i;
         // Find smallest
         for (int j = i + 1; j < pair_count; j++)
         {
-            if (min > preferences[pairs[j].winner][pairs[j].loser])
+            if (max < preferences[pairs[j].winner][pairs[j].loser])
             {
-                min = preferences[pairs[j].winner][pairs[j].loser];
+                max = preferences[pairs[j].winner][pairs[j].loser];
                 k = j;
             }
         }
