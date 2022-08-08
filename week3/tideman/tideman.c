@@ -218,6 +218,7 @@ void print_winner(void)
             if (locked[j][i])
             {
                 i++;
+                break;
             }
         }
         if (j == candidate_count)
