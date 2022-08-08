@@ -182,7 +182,7 @@ bool will_cycle(int winner, int loser)
     {
         if (locked[loser][i])
         {
-            if (will_cycle([winner][i])) // Recursion is difficult...
+            if (will_cycle(winner, i)) // Recursion is difficult...
             {
                 return true;
             }
