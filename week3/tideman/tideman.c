@@ -173,7 +173,7 @@ void sort_pairs(void)
 // Determine whether the next pair will cause a cycle or not
 bool will_cycle(int winner, int loser)
 {
-    
+    if ()
 
     for (int i = 0; i < candidate_count; i++)
     {
