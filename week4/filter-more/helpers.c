@@ -99,11 +99,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (h + row < 0 || h + row > height - 1)
                     {
-
+                        continue;
                     }
                     if (w + col < 0 || w + col > width - 1)
                     {
-
+                        continue;
                     }
                 }
             }
