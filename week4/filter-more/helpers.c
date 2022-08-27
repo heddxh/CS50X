@@ -41,11 +41,14 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE tmp[height][width];
-    int cnt = 0;
     for (int h = 0; h < height; h++)
     {
         for (int w = 0; w < width; w++)
         {
+            int cnt = 0;
+            int sumb = 0;
+            int sumg = 0;
+            int sumr = 0;
             for (int row = -1; row <= 1; row++)
             {
                 for (int col = -1; col <= 1; col++)
