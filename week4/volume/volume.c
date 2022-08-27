@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
     // Copy header from input file to output file
     uint8_t header[HEADER_SIZE];
-    uint8_t *header[HEADER_SIZE] = malloc(HEADER_SIZE);
+    header[HEADER_SIZE] = malloc(HEADER_SIZE);
 
     int cnt = fread(header, sizeof(uint8_t), 1, input);
     fwrite(header, sizeof(uint8_t), 1, output);
