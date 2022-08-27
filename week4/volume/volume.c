@@ -43,7 +43,9 @@ int main(int argc, char *argv[])
     free(output_pointer);
 
 
-    // TODO: Read samples from input file and write updated data to output file
+    // Read samples from input file and write updated data to output file
+    for (int i = HEADER_SIZE; i < )
+    int16_t buffer =
 
     // Close files
     fclose(input);
