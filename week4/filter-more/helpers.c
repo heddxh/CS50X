@@ -52,7 +52,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             if (w = 0)
             {
-                
+                ima
             }
         }
     }
