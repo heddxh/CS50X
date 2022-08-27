@@ -34,15 +34,16 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // Copy header from input file to output file
-    uint8_t *output_pointer = malloc(HEADER_SIZE);
+    uint8_t header[HEADER_SIZE] = malloc(HEADER_SIZE);
 
-    int cnt = fread(output_pointer, sizeof(uint8_t), 1, input);
-    fwrite(output_pointer, sizeof(uint8_t), 1, output);
+    int cnt = fread(header, sizeof(uint8_t), 1, input);
+    fwrite(header, sizeof(uint8_t), 1, output);
 
-    // Read samples from input file and write updated data to output file=
+    // Read samples from input file and write updated data to output file
     for (int i = HEADER_SIZE; i < cnt; i++)
     {
-        int16_t buffer = 
+        int16_t buffer = header[i] * factor;
+
     }
 
 
