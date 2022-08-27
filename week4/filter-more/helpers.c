@@ -50,9 +50,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 if (h + row < 0 || h + row > height - 1)
                 {
-                    continue; // Out of this loop
+                    continue; // Go out of this loop
                 }
-                
+
             }
         }
     }
