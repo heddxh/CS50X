@@ -110,7 +110,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (row != 0)
                     {
-                        
+                        gx += col * 
                     }
                 }
             }
