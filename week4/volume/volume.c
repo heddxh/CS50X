@@ -43,9 +43,9 @@ int main(int argc, char *argv[])
     for (int i = HEADER_SIZE; i < cnt; i++)
     {
         int16_t buffer = header[i] * factor;
-
+        fwrite(&buffer, sizeof(uint16_t), 1, output);
     }
-
+    fwrite(, sizeof(uint16_t), 1, output);
 
     free(output_pointer);
 
