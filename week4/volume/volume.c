@@ -35,10 +35,9 @@ int main(int argc, char *argv[])
 
     // Copy header from input file to output file
     uint8_t header[HEADER_SIZE];
-    int *p= malloc(HEADER_SIZE);
 
-    int cnt = fread(p, sizeof(uint8_t), 1, input);
-    fwrite(p, sizeof(uint8_t), 1, output);
+    int cnt = fread(header, sizeof(uint8_t), 1, input);
+    fwrite(header, sizeof(uint8_t), 1, output);
 
     // Read samples from input file and write updated data to output file
     for (int i = HEADER_SIZE; i < cnt; i++)
@@ -46,9 +45,6 @@ int main(int argc, char *argv[])
         int16_t buffer = header[i] * factor;
         fwrite(&buffer, sizeof(uint16_t), 1, output);
     }
-    fwrite(, sizeof(uint16_t), 1, output);
-
-    free(output_pointer);
 
     // Close files
     fclose(input);
