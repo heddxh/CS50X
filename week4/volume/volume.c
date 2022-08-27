@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
          fread(output_pointer, sizeof(uint8_t), 1, input);
          fwrite(output_pointer, sizeof(uint8_t), 1, output);
     }
-    free()
+    free(output_pointer);
 
 
     // TODO: Read samples from input file and write updated data to output file
