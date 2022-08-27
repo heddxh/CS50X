@@ -95,17 +95,26 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int gy = 0;
             for (int row = -1; row <= 1; row++)
             {
+                if (h + row < 0 || h + row > height - 1)
+                {
+                    continue;
+                }
                 for (int col = -1; col <= 1; col++)
                 {
-                    if (h + row < 0 || h + row > height - 1)
-                    {
-                        continue;
-                    }
                     if (w + col < 0 || w + col > width - 1)
                     {
                         continue;
                     }
                 }
+                if (col != 0)
+                {
+                    if (row != 0)
+                    {
+                        
+                    }
+                }
             }
+        }
+    }
     return;
 }
