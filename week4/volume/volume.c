@@ -38,8 +38,8 @@ int main(int argc, char *argv[])
     uint8_t *output_pointer = malloc(HEADER_SIZE);
     for (int i = 0; i < HEADER_SIZE; i++)
     {
-         fread(out_pointer, sizeof(uint8_t), 1, input);
-         fwrite(out_pointer, sizeof(uint8_t), 1, output)
+         fread(output_pointer, sizeof(uint8_t), 1, input);
+         fwrite(output_pointer, sizeof(uint8_t), 1, output);
     }
 
 
