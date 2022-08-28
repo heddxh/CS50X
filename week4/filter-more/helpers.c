@@ -126,8 +126,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            tmp [h][w] = 
+            tmp [h][w] =
         }
     }
     return;
 }
+
+void BGRcompute()
