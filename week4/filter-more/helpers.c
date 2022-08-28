@@ -92,8 +92,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int w = 0; w < width; w++)
         {
-            int gx = 0;
-            int gy = 0;
+            RGBTRIPLE gx = 0;
+            RGBTRIPLE gy = 0;
 
             for (int row = -1; row <= 1; row++)
             {
@@ -112,7 +112,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (row != 0)
                     {
-                        gx += col * 1;
+                        gx = gx + BGRcompute(image[h][w], '*', 1);
+                        gx = BGRcompute(image[h][w], '+', )
                         gy += row * 1;
                     }
                     else
@@ -132,7 +133,20 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-void BGRcompute(RGBTRIPLE bgr)
+RGBTRIPLE BGRcompute(RGBTRIPLE input, char operator, int n)
 {
-    
+    RGBTRIPLE output;
+    if (operator == '*')
+    {
+        output.rgbtBlue = input.rgbtBlue * n;
+        output.rgbtGreen = input.rgbtGreen * n;
+        output.rgbtRed = input.rgbtRed * n;
+        return output;
+    }
+    if (operator == '+')
+    {
+        output.rgbtBlue = input.rgbtBlue + n;
+        output.rgbtGreen = input.rgbtGreen + n;
+        output.rgbtRed = input.rgbtRed + n;
+    }
 }
