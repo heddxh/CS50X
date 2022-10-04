@@ -132,21 +132,3 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
-
-RGBTRIPLE BGRcompute(RGBTRIPLE input, char operator, int n)
-{
-    RGBTRIPLE output;
-    if (operator == '*')
-    {
-        output.rgbtBlue = input.rgbtBlue * n;
-        output.rgbtGreen = input.rgbtGreen * n;
-        output.rgbtRed = input.rgbtRed * n;
-        return output;
-    }
-    if (operator == '+')
-    {
-        output.rgbtBlue = input.rgbtBlue + n;
-        output.rgbtGreen = input.rgbtGreen + n;
-        output.rgbtRed = input.rgbtRed + n;
-    }
-}
