@@ -31,6 +31,8 @@ int main(int argc, char *argv[])
             if (buffer[3] & 0x0f == 0xef)
             {
                 sprint(filename, "%03i.jpg", cnt);
+                FILE *img = fopen(filename, "w");
+                fwrite(filename, )
             }
         }
     }
