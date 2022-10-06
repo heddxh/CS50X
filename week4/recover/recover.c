@@ -33,14 +33,13 @@ int main(int argc, char *argv[])
             img = fopen(filename, "w");
             cnt++;
         }
-        else
+        if (cnt > 0)
         {
-            if (cnt > 0)
-            {
-                fwrite(&buffer, BLOCK_SIZE, 1, img);
-            }
+            fwrite(&buffer, BLOCK_SIZE, 1, img);
         }
+
     }
     fclose(raw_file);
     fclose(img);
+    return 0;
 }
