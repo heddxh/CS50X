@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+const int BLOCK_SIZE = 512;
+typedef uint8_t BYTE;
+
 int main(int argc, char *argv[])
 {
-    const int BLOCK_SIZE = 512;
-
     if (argc != 2)
     {
         printf("Usage: ./recover IMAGE");
