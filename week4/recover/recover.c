@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
             {
                 sprint(filename, "%03i.jpg", cnt);
                 FILE *img = fopen(filename, "w");
-                fwrite(filename, )
+                fwrite()
             }
         }
     }
