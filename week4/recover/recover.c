@@ -4,6 +4,7 @@
 
 const int BLOCK_SIZE = 512;
 typedef uint8_t BYTE;
+char filename[8];
 
 int main(int argc, char *argv[])
 {
