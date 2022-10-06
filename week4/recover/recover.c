@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     }
 
     const int BLOCK_SIZE = 512;
-    FILE *file = fopen(argv[1], "r");
+    FILE *raw_file = fopen(argv[1], "r");
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
 
