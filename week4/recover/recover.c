@@ -27,12 +27,13 @@ int main(int argc, char *argv[])
 
     while (fread(&buffer, BLOCK_SIZE, 1, raw_file)) // When reach the end, return 0, jump out the loop
     {
-        if (cnt != 0)
-        {
-            fclose(img); // Free memory except the first loop
-        }
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0) // Attention the priority
         {
+            if (cnt != 0) // Put in this condition to avoid "double free"
+            {
+                fclose(img); // Free memory except the first loop
+            }
+
             sprintf(filename, "%03i.jpg", cnt);
             img = fopen(filename, "w");
             cnt++;
