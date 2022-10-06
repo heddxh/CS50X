@@ -30,9 +30,15 @@ int main(int argc, char *argv[])
         {
             if (buffer[3] & 0x0f == 0xef)
             {
-                sprint(filename, "%03i.jpg", cnt);
+                if (cnt > 0) // Already found a header
+                {
+                    sprint(filename, "%03i.jpg", cnt);
+                    FILE *img = fopen(filename, "w");
+                    fwrite(*buffer, BLOCK_SIZE, 1, img);
+                }
+
                 cnt++;
-                FILE *img = fopen(filename, "w");
+
                 fwrite(*buffer, BLOCK_SIZE, 1, img);
             }
         }
