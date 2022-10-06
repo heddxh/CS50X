@@ -4,7 +4,6 @@
 
 const int BLOCK_SIZE = 512;
 typedef uint8_t BYTE;
-char filename[8];
 
 int main(int argc, char *argv[])
 {
@@ -22,6 +21,8 @@ int main(int argc, char *argv[])
     }
 
     BYTE buffer[BLOCK_SIZE];
+    char filename[8];
+    int cnt = 0;
 
     while (fread(&buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
