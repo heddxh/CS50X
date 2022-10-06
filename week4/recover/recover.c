@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     char filename[8]; // 7 width and the NUL
     int cnt = 0;
 
-    while (fread(&buffer, BLOCK_SIZE, 1, raw_file) == BLOCK_SIZE)
+    while (fread(&buffer, BLOCK_SIZE, 1, raw_file))
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff)
         {
