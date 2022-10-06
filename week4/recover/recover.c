@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 const int BLOCK_SIZE = 512;
 typedef uint8_t BYTE;
@@ -19,7 +20,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    int *buffer =
+    BYTE buffer[BLOCK_SIZE];
+
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
 
