@@ -37,9 +37,8 @@ int main(int argc, char *argv[])
         {
             fwrite(&buffer, BLOCK_SIZE, 1, img);
         }
-
+        fclose(raw_file);
+        fclose(img);
     }
-    fclose(raw_file);
-    fclose(img);
     return 0;
 }
