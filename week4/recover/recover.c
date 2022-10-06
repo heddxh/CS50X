@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     }
 
     BYTE buffer[BLOCK_SIZE];
-    char filename[8];
+    char filename[8]; // 7 width and the NUL
     int cnt = 0;
 
     while (fread(&buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
         {
             if (buffer[3] & 0x0f == 0xef)
             {
-                sprint(filename, )
+                sprint(filename, "%03i.jpg", cnt);
             }
         }
     }
