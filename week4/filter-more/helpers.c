@@ -85,6 +85,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Detect edges
+// NOT COMPLETED!!!!!!
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE tmp[height][width];
