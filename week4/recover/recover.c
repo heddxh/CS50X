@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 
     while (fread(&buffer, BLOCK_SIZE, 1, raw_file)) // When reach the end, return 0, jump out the loop
     {
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0) //Attention the priority
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0) // Attention the priority
         {
             sprintf(filename, "%03i.jpg", cnt);
             img = fopen(filename, "w");
