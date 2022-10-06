@@ -34,11 +34,10 @@ int main(int argc, char *argv[])
         }
         else
         {
-            if (cnt == 0)
+            if (cnt > 0)
             {
-                break;
+                fwrite(*buffer, BLOCK_SIZE, 1, img);
             }
-            fwrite(*buffer, BLOCK_SIZE, 1, img);
         }
     }
 }
