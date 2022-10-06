@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
         {
             if (buffer[3] >= 0xe0 && buffer[3] <= 0xef)
             {
-                sprint
+                sprint(filename, )
             }
         }
     }
