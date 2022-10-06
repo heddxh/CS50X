@@ -26,22 +26,19 @@ int main(int argc, char *argv[])
 
     while (fread(&buffer, BLOCK_SIZE, 1, raw_file)) // When reach the end, return 0, jump out the loop
     {
-        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && buffer[3] & 0x0f == 0xef)
         {
-            if (buffer[3] & 0x0f == 0xef)
+            sprint(filename, "%03i.jpg", cnt);
+            FILE *img = fopen(filename, "w");
+            cnt++;
+        }
+        else
+        {
+            if (cnt == 0)
             {
-                sprint(filename, "%03i.jpg", cnt);
-                FILE *img = fopen(filename, "w");
-                
-                if (cnt > 0) // Already found a header
-                {
-                    fwrite(*buffer, BLOCK_SIZE, 1, img);
-                }
-
-                cnt++;
-
-                fwrite(*buffer, BLOCK_SIZE, 1, img);
+                break;
             }
+            fwrite(*buffer, BLOCK_SIZE, 1, img);
         }
     }
 }
