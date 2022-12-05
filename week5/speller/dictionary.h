@@ -1,9 +1,10 @@
 // Declares a dictionary's functionality
 
+// Ensure that, even though dictionary.c and speller.c `#include` this file, `clang` will only compile it once.
 #ifndef DICTIONARY_H
 #define DICTIONARY_H
 
-#include <stdbool.h>
+#include <stdbool.h> // Define type Bool (used to be within `cs50.h`)
 
 // Maximum length for a word
 // (e.g., pneumonoultramicroscopicsilicovolcanoconiosis)
