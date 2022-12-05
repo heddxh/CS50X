@@ -1,4 +1,4 @@
-## What to ADD insteand off CHANGE
+## What to ADDInstea CHANGE
 
 - dictionary.c
 - dictionary.hv
