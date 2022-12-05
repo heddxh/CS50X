@@ -9,7 +9,7 @@
 
 // Undefine any definitions
 #undef calculate
-#undef getrusage
+#undef getrusage // Benchmarking
 
 // Default dictionary
 #define DICTIONARY "dictionaries/large"
