@@ -1,4 +1,7 @@
-## What to ADDInstea CHANGE
-
+## What to ADD Instead of CHANGE
 - dictionary.c
-- dictionary.hv
+- dictionary.h
+
+## Tips
+- case insensitive
+- 
