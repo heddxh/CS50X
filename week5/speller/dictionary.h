@@ -11,9 +11,9 @@
 #define LENGTH 45
 
 // Prototypes
-bool check(const char *word);
-unsigned int hash(const char *word);
-bool load(const char *dictionary);
+bool check(const char *word); // String
+unsigned int hash(const char *word); // String
+bool load(const char *dictionary); // String
 unsigned int size(void);
 bool unload(void);
 
