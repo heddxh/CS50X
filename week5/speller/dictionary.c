@@ -46,7 +46,7 @@ bool load(const char *dictionary)
 {
     // TODO:
     FILE *DICT = fopen(dictionary, "r");
-    char *dict[]
+    char *dict
     fread()
     if (dict == NULL)
     {
