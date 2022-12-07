@@ -61,6 +61,7 @@ unsigned int size(void)
 {
     // TODO:
     int size = 0;
+    
     while (word != NULL)
     {
         size++;
