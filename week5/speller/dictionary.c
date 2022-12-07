@@ -36,6 +36,7 @@ unsigned int hash(const char *word)
     while (word[i] != NULL)
     {
         hash = hash * 10 + toupper(word[i]) - 'A';
+        i++;
     }
     return hash;
 }
@@ -59,9 +60,10 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO:
+    int size = 0;
     while (word != NULL)
     {
-        
+        size++;
     }
     return 0;
 }
