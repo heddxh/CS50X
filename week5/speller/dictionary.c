@@ -59,7 +59,10 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO:
-    
+    while (word != NULL)
+    {
+        
+    }
     return 0;
 }
 
