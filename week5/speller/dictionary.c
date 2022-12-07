@@ -8,8 +8,7 @@
 // Represents a node in a hash table
 typedef struct node
 {
-    // char word[LENGTH + 1];
-    char word;
+    char word[LENGTH + 1];
     struct node *next;
 }
 node;
@@ -25,8 +24,8 @@ bool check(const char *word)
 {
     // TODO:
     int hash = hash(word);
-
-    hash[0] 
+    code
+    hash[0]
 
     return false;
 }
