@@ -15,7 +15,8 @@
 	"tomoki1207.pdf",
 	"vscjava.vscode-java-debug",
 	"vsls-contrib.gitdoc",
-	"yzhang.markdown-all-in-one"
+	"yzhang.markdown-all-in-one",
+	"dracula-theme.theme-dracula"
 ],
   "forwardPorts": [
     5000,
