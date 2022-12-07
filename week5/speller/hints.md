@@ -4,4 +4,3 @@
 
 ## Tips
 - case insensitive
-- 

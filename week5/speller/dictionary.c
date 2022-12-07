@@ -32,8 +32,12 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     int i = 0;
-    while (word[i])
-    return toupper(word[0]) - 'A';
+    int hash;
+    while (word[i] != NULL)
+    {
+        hash = hash * 10 + toupper(word[i]) - 'A';
+    }
+    return hash;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
