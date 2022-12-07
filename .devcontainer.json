@@ -16,7 +16,8 @@
 	"vscjava.vscode-java-debug",
 	"vsls-contrib.gitdoc",
 	"yzhang.markdown-all-in-one",
-	"dracula-theme.theme-dracula"
+	"dracula-theme.theme-dracula",
+	"wayou.vscode-todo-highlight"
 ],
   "forwardPorts": [
     5000,
