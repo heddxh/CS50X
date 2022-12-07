@@ -45,7 +45,8 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO:
-    FILE *dict = fopen(dictionary, "r");
+    FILE *DICT = fopen(dictionary, "r");
+    fread()
     if (dict == NULL)
     {
         return false;
@@ -61,7 +62,7 @@ unsigned int size(void)
 {
     // TODO:
     int size = 0;
-    
+
     while (word != NULL)
     {
         size++;
