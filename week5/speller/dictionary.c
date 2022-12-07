@@ -25,8 +25,9 @@ bool check(const char *word)
 {
     // TODO:
     int hash = hash(word);
-    int len = 
-    for (int i = 0; i < )
+
+    hash[0] 
+
     return false;
 }
 
