@@ -23,7 +23,7 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO:
-    
+
     return false;
 }
 
@@ -38,6 +38,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO:
+    malloc
     return false;
 }
 
