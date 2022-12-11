@@ -34,7 +34,13 @@ bool check(const char *word)
 {
     // TODO:
     int hash = hash(word);
-    
+    int index[];
+    int i = 0;
+    while (hash > 0)
+    {
+        index[i] = 
+    }
+    int index = hash / SIZE_OF_ALPHABET
     hash[0]
 
     return false;
@@ -48,7 +54,7 @@ unsigned int hash(const char *word)
     int hash[];
     while (word[i] != NULL)
     {
-        hash = hash * 26 + toupper(word[i]) - 'A';
+        hash = hash * SIZE_OF_ALPHABET + toupper(word[i]) - 'A';
         i++;
     }
     return hash;
