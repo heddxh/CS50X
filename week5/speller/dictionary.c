@@ -45,7 +45,7 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     int i = 0;
-    int hash;
+    char *hash[];
     while (word[i] != NULL)
     {
         hash = toupper(word[i]) - 'A';
