@@ -10,9 +10,12 @@
 // (e.g., pneumonoultramicroscopicsilicovolcanoconiosis)
 #define LENGTH 45
 
+// Define the size of Alphabet for the data type `triw_node`
+#define SIZE_OF_ALPHABET 26
+
 // Prototypes
 bool check(const char *word); // String and CANNOT change
-unsigned int hash(const char *word); 
+unsigned int hash(const char *word);
 bool load(const char *dictionary);
 unsigned int size(void);
 bool unload(void);

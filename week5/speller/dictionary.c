@@ -6,15 +6,25 @@
 #include "dictionary.h"
 
 // Represents a node in a hash table
-typedef struct node
+/*typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
 }
 node;
+*/
+
+// TODO:
+typedef struct node
+{
+    bool is_word;
+    struct node *children[SIZE_OF_ALPHABET];
+}
+node;
+
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26 * LENGTH;
+const unsigned int N = SIZE_OF_ALPHABET ^ LENGTH;
 
 // Hash table
 node *table[N];
@@ -38,7 +48,11 @@ unsigned int hash(const char *word)
     int hash;
     while (word[i] != NULL)
     {
-        hash = hash * 10 + toupper(word[i]) - 'A';
+        hash = toupper(word[i]) - 'A';
+        if (hash < 0)
+        {
+            hash = hash
+        }
         i++;
     }
     return hash;
