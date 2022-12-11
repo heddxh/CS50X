@@ -34,7 +34,7 @@ bool check(const char *word)
 {
     // TODO:
     int hash = hash(word);
-    code
+    
     hash[0]
 
     return false;
@@ -45,14 +45,10 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     int i = 0;
-    char *hash[];
+    int hash[];
     while (word[i] != NULL)
     {
-        hash = toupper(word[i]) - 'A';
-        if (hash < 0)
-        {
-            hash = hash
-        }
+        hash = hash * 26 + toupper(word[i]) - 'A';
         i++;
     }
     return hash;
