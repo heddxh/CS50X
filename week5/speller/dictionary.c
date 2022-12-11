@@ -36,11 +36,15 @@ bool check(const char *word)
     int hash = hash(word);
     int index[];
     int i = 0;
-    // 产生一个逆序的数组
+    // 产生一个逆序的数组，注意余数26整除为0时我们应该得到26
     while (hash > 0)
     {
         index[i] = hash - hash / SIZE_OF_ALPHABET;
         hash = hash / SIZE_OF_ALPHABET;
+        if (index[i] == 0)
+        {
+            index[i] = 26
+        }
         i++;
     }
     // 正序化
