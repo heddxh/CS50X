@@ -36,12 +36,15 @@ bool check(const char *word)
     int hash = hash(word);
     int index[];
     int i = 0;
+    // 产生一个逆序的数组
     while (hash > 0)
     {
-        index[i] = 
+        index[i] = hash - hash / SIZE_OF_ALPHABET;
+        hash = hash / SIZE_OF_ALPHABET;
+        i++;
     }
-    int index = hash / SIZE_OF_ALPHABET
-    hash[0]
+    // 正序化
+    
 
     return false;
 }
