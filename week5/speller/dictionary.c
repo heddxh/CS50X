@@ -32,23 +32,26 @@ node *trie[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO:
     int hash = hash(word);
     int index[];
-    int i = 0;
-    // 产生一个逆序的数组，注意余数26整除为0时我们应该得到26
+    int len =  strlen(word)
+    int i = 1;
+    // 注意余数26整除为0时，我们应该得到26
     while (hash > 0)
     {
-        index[i] = hash - hash / SIZE_OF_ALPHABET;
+        index[len - i] = hash - hash / SIZE_OF_ALPHABET;
         hash = hash / SIZE_OF_ALPHABET;
-        if (index[i] == 0)
+        if (index[len - i] == 0)
         {
-            index[i] = 26
+            index[len - i] = 26
         }
         i++;
     }
-    // 正序化
-    
+    // TODO:
+    for (int i = 0; i < len; i++)
+    {
+        if (trie[])
+    }
 
     return false;
 }
@@ -56,11 +59,11 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
+    // Improve this hash function
     int i = 0;
     int hash[];
     while (word[i] != NULL)
-    {
+    {int len =  strlen(word)
         hash = hash * SIZE_OF_ALPHABET + toupper(word[i]) - 'A';
         i++;
     }
