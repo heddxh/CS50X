@@ -82,8 +82,18 @@ bool load(const char *dictionary)
         return false;
     }
 
-        int i = 0;
-        while (isalpha(dict[i]))
+    int i = 0;
+    int cnt = 0;
+    char word[];
+    while (isalpha(dict[i]))
+    {
+        word[cnt] = dict[i];
+        i++;
+    }
+    if (dict[i] == "\n")
+    {
+        cnt++;
+    }
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
