@@ -76,8 +76,7 @@ bool load(const char *dictionary)
     // TODO:
     FILE *DICT = fopen(dictionary, "r");
     node *dict = malloc(sizeof(node));
-    fread(dict, sizeof(node), , DICT);
-    fread()
+    fread(dict, sizeof(node), 1, DICT);
     if (dict == NULL)
     {
         return false;
@@ -93,12 +92,11 @@ unsigned int size(void)
 {
     // TODO:
     int size = 0;
-
     while (word != NULL)
     {
         size++;
     }
-    return 0;
+    return size;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
