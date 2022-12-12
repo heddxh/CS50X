@@ -50,7 +50,7 @@ bool check(const char *word)
     // TODO:
     for (int i = 0; i < len; i++)
     {
-        if (trie[])
+        
     }
 
     return false;
