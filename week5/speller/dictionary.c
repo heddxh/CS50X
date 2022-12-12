@@ -81,10 +81,9 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    else
-    {
-        while ()
-    }
+
+        int i = 0;
+        while (isalpha(dict[i]))
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
