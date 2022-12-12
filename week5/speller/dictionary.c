@@ -90,7 +90,6 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO:
     int size = 0;
     while (word != NULL)
     {
