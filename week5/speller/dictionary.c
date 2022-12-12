@@ -84,7 +84,7 @@ bool load(const char *dictionary)
 
     int i = 0;
     int cnt = 0;
-    char word[];
+    char *word[];
     while (isalpha(dict[i]))
     {
         word[cnt] = dict[i];
@@ -94,6 +94,7 @@ bool load(const char *dictionary)
     {
         cnt++;
     }
+
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
