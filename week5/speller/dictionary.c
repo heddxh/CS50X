@@ -75,8 +75,8 @@ bool load(const char *dictionary)
 {
     // TODO:
     FILE *DICT = fopen(dictionary, "r");
-    node *trie = malloc(sizeof(node));
-    fread(trie, sizeof(node), 1, DICT);
+    char *dict = malloc(sizeof(char));
+    fread(dict, sizeof(char), 1, DICT);
     if (dict == NULL)
     {
         return false;
