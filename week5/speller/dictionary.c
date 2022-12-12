@@ -87,7 +87,7 @@ bool load(const char *dictionary)
     char *word[];
     while (isalpha(dict[i]))
     {
-        word[cnt] = dict[i];
+        *word[] = dict[i];
         i++;
     }
     if (dict[i] == "\n")
