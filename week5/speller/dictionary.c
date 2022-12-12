@@ -70,34 +70,63 @@ unsigned int hash(const char *word)
     return hash;
 }
 
+// TODO:
+void unhash(const char *word)
+{
+    int index[];
+    int len = strlen(word);
+    int i = 1;
+    // 注意余数26整除为0时，我们应该得到25
+    while (hash > 0)
+    {
+        index[len - i] = hash - hash / SIZE_OF_ALPHABET;
+        hash = hash / SIZE_OF_ALPHABET;
+        if (index[len - i] == 0)
+        {
+            index[len - i] = 25
+        }
+        i++;
+    }
+}
+
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO:
     FILE *DICT = fopen(dictionary, "r");
-    char *dict = malloc(sizeof(char));
+    //FIXME: char *dict = malloc(sizeof(char));
     fread(dict, sizeof(char), 1, DICT);
     if (dict == NULL)
     {
         return false;
     }
 
-    int i = 0;
-    int cnt = 0;
-    char *word[];
-    while (isalpha(dict[i]))
+    int c_index = 0; //每个单词第几个字母
+    int word_index = 0; //第几个单词
+    char *word;
+    char *words[]; // 包含指针的数组,每个指针指向字符数组，即字符串
+    while (isalpha(dict[c_index]))
     {
-        *word[] = dict[i];
-        i++;
+        words[c_index] = dict[c_index];
+        c_index++;
     }
-    if (dict[i] == "\n")
+    if (dict[c_index] == "\n")
     {
-        cnt++;
+        words[word_index] = word;
+        word_index++;
+    }
+
+    int hash_dict;
+    for (int i = 0; i <= cnt; i++)
+    {
+        hash_dict= hash(*words[i]);
+        trie[hash]->
+
     }
 
 }
 
-// Returns number of words in dictionary if loaded, else 0 if not yet loaded
+// TODO:Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
     int size = 0;
