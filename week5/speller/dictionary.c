@@ -36,15 +36,10 @@ bool check(const char *word)
     int index[];
     int len =  strlen(word)
     int i = 1;
-    // 注意整除时，我们应该得到余数为0
     while (hash > 0)
     {
         index[len - i] = hash - hash / SIZE_OF_ALPHABET * 26;
         hash = hash / SIZE_OF_ALPHABET;
-        if (index[len - i] == 26)
-        {
-            index[len - i] = 0;
-        }
         i++;
     }
     // TODO:
