@@ -104,13 +104,14 @@ bool load(const char *dictionary)
     while (isalpha(dict[c_index]))
     {
         words[c_index] = dict[c_index];
+        word[]
         c_index++;
     }
     if (dict[c_index] == "\n")
     {
         words[word_index] = word;
         word_index++;
-        
+
     }
 
     int index;
