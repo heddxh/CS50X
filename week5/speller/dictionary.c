@@ -39,7 +39,7 @@ bool check(const char *word)
     // 注意余数26整除为0时，我们应该得到25
     while (hash > 0)
     {
-        index[len - i] = hash - hash / SIZE_OF_ALPHABET;
+        index[len - i] = hash - hash / SIZE_OF_ALPHABET * 26;
         hash = hash / SIZE_OF_ALPHABET;
         if (index[len - i] == 0)
         {
