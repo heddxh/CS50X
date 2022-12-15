@@ -57,8 +57,9 @@ unsigned int hash(const char *word)
     // Improve this hash function
     int i = 0;
     int hash[];
-    while (word[i] != NULL)
-    {int len =  strlen(word)
+    while (word[i] != NULL);
+    {
+        int len =  strlen(word)
         hash = hash * SIZE_OF_ALPHABET + toupper(word[i]) - 'A';
         i++;
     }
