@@ -112,10 +112,10 @@ bool load(const char *dictionary)
         word_index++;
     }
 
-    int hash_dict;
+    int index;
     for (int i = 0; i <= cnt; i++)
     {
-        hash_dict= hash(*words[i]);
+        index = toupper(word[i]) - 'A';
         trie[hash]->
 
     }
