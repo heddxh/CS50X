@@ -110,6 +110,7 @@ bool load(const char *dictionary)
     {
         words[word_index] = word;
         word_index++;
+        
     }
 
     int index;
