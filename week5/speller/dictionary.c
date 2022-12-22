@@ -66,7 +66,7 @@ unsigned int hash(const char *word)
     return hash;
 }
 
-// TODO:
+/*
 void unhash(const char *word)
 {
     int index[];
@@ -84,6 +84,7 @@ void unhash(const char *word)
         i++;
     }
 }
+*/
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
