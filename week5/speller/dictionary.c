@@ -32,7 +32,7 @@ node *taleb[N];
 bool check(const char *word)
 {
     int hash = hash(word);
-    
+
 }
 // Hashes word to a number
 unsigned int hash(const char *word)
@@ -66,37 +66,13 @@ void unhash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *DICT = fopen(dictionary, "r");
-    //FIXME: char *dict = malloc(sizeof(char));
     fread(dict, sizeof(char), 1, DICT);
     if (dict == NULL)
     {
         return false;
     }
 
-    int c_index = 0; //每个单词第几个字母
-    int word_index = 0; //第几个单词
-    char *word;
-    char *words[]; // 包含指针的数组,每个指针指向字符数组，即字符串
-    while (isalpha(dict[c_index]))
-    {
-        words[c_index] = dict[c_index];
-        word[]
-        c_index++;
-    }
-    if (dict[c_index] == "\n")
-    {
-        words[word_index] = word;
-        word_index++;
-
-    }
-
-    int index;
-    for (int i = 0; i <= cnt; i++)
-    {
-        index = toupper(word[i]) - 'A';
-        trie[hash]->
-
-    }
+    
 
 }
 
