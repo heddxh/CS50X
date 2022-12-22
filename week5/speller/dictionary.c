@@ -6,63 +6,38 @@
 #include "dictionary.h"
 
 // Represents a node in a hash table
-/*typedef struct node
+typedef struct node
 {
-    char word[LENGTH + 1];
+    char word[LENGTH];
     struct node *next;
 }
 node;
-*/
 
-// TODO:
-typedef struct node
+
+/*typedef struct node
 {
     bool is_word;
     struct node *children[SIZE_OF_ALPHABET];
 }
 node;
+*/
 
+// Choose number of buckets in hash table
+const unsigned int N = SIZE_OF_ALPHABET;
 
-// TODO: Choose number of buckets in hash table
-const unsigned int N = SIZE_OF_ALPHABET * LENGTH;
-
-// Hash table, maybe trie?
-node *trie[N];
+node *taleb[N];
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
     int hash = hash(word);
-    int index[];
-    int len =  strlen(word)
-    int i = 1;
-    while (hash > 0)
-    {
-        index[len - i] = hash - hash / SIZE_OF_ALPHABET * 26;
-        hash = hash / SIZE_OF_ALPHABET;
-        i++;
-    }
-    // TODO:
-    for (int i = 0; i < len; i++)
-    {
 
-    }
-
-    return false;
 }
-
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // Improve this hash function
-    int i = 0;
-    int hash[];
-    while (word[i] != NULL);
-    {
-        int len =  strlen(word)
-        hash = hash * SIZE_OF_ALPHABET + toupper(word[i]) - 'A';
-        i++;
-    }
+    int hash;
+    hash = word[0]
     return hash;
 }
 
