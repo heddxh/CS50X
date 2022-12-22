@@ -31,7 +31,7 @@ node *taleb[N];
 bool check(const char *word)
 {
     int hash = hash(word);
-    table[hash]
+    
 }
 // Hashes word to a number
 unsigned int hash(const char *word)
