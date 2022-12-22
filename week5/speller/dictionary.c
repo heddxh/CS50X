@@ -31,13 +31,13 @@ node *taleb[N];
 bool check(const char *word)
 {
     int hash = hash(word);
-
+    table[hash]
 }
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
     int hash;
-    hash = word[0]
+    hash = int(toupper(word[0]) - "A");
     return hash;
 }
 
@@ -64,7 +64,6 @@ void unhash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO:
     FILE *DICT = fopen(dictionary, "r");
     //FIXME: char *dict = malloc(sizeof(char));
     fread(dict, sizeof(char), 1, DICT);
