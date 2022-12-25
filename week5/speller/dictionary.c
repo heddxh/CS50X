@@ -78,10 +78,6 @@ bool load(const char *dictionary)
     {
         
     }
-    for (int i = 0; i <= LENGTH; i++)
-    {
-        if (dict[])
-    }
 
     return true;
 }
