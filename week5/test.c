@@ -2,10 +2,10 @@
 
 int main(void)
 {
-    char buffer;
+    char buffer[3];
     FILE *file = fopen("hi.txt", "r");
     while (fscanf(file, "%s", buffer) != EOF)
     {
-        printf("%c\n", buffer);
+        printf("%s\n", buffer);
     }
 }
