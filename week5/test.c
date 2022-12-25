@@ -9,5 +9,5 @@ int main(void)
         printf("%s\n", buffer);
     }*/
     fscanf(file, "%s", buffer);
-    printf("%c %c %c\n", buffer[0], buffer[1], buffer[2]);
+    printf("%c %c %c %c\n", buffer[0], buffer[1], buffer[2], buffer[4]);
 }
