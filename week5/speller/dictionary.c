@@ -73,7 +73,11 @@ bool load(const char *dictionary)
         return false;
     }
 
-    for ()
+    for (int i = 0; i <= LENGTH; i++)
+    {
+        if (dict)
+    }
+
     return true;
 }
 
