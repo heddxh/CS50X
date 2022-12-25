@@ -6,6 +6,6 @@ int main(void)
     FILE *file = fopen("hi.txt", "r");
     while (fscanf(file, "%s", buffer) != EOF)
     {
-        printf("%s\n", buffer);
+        printf("%c\n", buffer);
     }
 }
