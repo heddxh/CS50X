@@ -86,7 +86,7 @@ bool load(const char *dictionary)
 
         strcpy(words_node->word, dict_word);
         count++;
-        
+        // Make 
     }
 
     return true;
