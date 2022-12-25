@@ -29,6 +29,8 @@ const unsigned int N = SIZE_OF_ALPHABET;
 
 node *taleb[N];
 
+int count = 0;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -82,6 +84,8 @@ bool load(const char *dictionary)
             return false;
         }
 
+        strcpy(words_node->word, dict_word);
+        count++;
         
     }
 
