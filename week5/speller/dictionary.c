@@ -73,9 +73,10 @@ bool load(const char *dictionary)
         return false;
     }
 
+    int line = 0;
     for (int i = 0; i <= LENGTH; i++)
     {
-        if (dict)
+        if (dict[])
     }
 
     return true;
