@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    char buffer[3];
+    char buffer[1];
     FILE *file = fopen("hi.txt", "r");
     while (fscanf(file, "%s", buffer) != EOF)
     {
