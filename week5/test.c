@@ -3,11 +3,8 @@
 int main(void)
 {
     FILE *file = fopen("hi.txt", "r");
-    if (file != NULL)
+    while (fscanf(file, "%s", buffer) != EOF)
     {
-        char buffer[3];
-        fscanf(file, "%s", buffer);
-        fclose(file);
-        printf("%s\n", buffer);
+        
     }
 }
