@@ -67,14 +67,13 @@ void unhash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *DICT = fopen(dictionary, "r");
-    char *dict = malloc(sizeof(char));
+    char *dict = malloc(sizeof(LENGTH + 1));
     // fread(dict, sizeof(char), 1, DICT);
     if (dict == NULL)
     {
         return false;
     }
 
-    int line = 0;
     for (int i = 0; i <= LENGTH; i++)
     {
         if (dict[])
