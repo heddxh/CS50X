@@ -83,6 +83,7 @@ bool load(const char *dictionary)
     // fread(dict, sizeof(char), 1, DICT);
     if (dict == NULL)
     {
+        fclose(dictionary);
         return false;
     }
 
@@ -99,6 +100,7 @@ bool load(const char *dictionary)
         word_node->next = table[hash(dict_word)]->next;
         table[hash(dict_word)] = word_node;
     }
+    fclose(dictionary);
     return true;
 }
 
@@ -112,6 +114,6 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    free(dict_word);
+    free();
     return true;
 }
