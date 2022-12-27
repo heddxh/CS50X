@@ -4,6 +4,6 @@
 int main(void)
 {
     const char *word = "BAC";
-    int a = toupper(word[0]) - (int) "A";
+    int a = toupper(word[0]) - "A";
     printf("%i\n", a);
 }
