@@ -35,7 +35,7 @@ unsigned int count = 0;
 bool check(const char *word)
 {
     int hash = hash(word);
-
+    
 }
 // Hashes word to a number
 unsigned int hash(const char *word)
@@ -103,7 +103,5 @@ unsigned int size(void)
 bool unload(void)
 {
     free(dict_word);
-
-
-    return false;
+    return true;
 }
