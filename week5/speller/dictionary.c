@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "dictionary.h"
 
@@ -27,16 +28,16 @@ node;
 // Choose number of buckets in hash table
 const unsigned int N = SIZE_OF_ALPHABET;
 
-node *taleb[N];
+node *table[N];
 
 unsigned int count = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    int hash = hash(word);
-    node *cursor = table[hash];
-    while(scrcasecmp(word, cursor->word) != 0)
+    int hash_word = hash(word);
+    node *cursor = table[hash_word];
+    while(strcasecmp(word, cursor->word) != 0)
     {
         cursor = cursor->next;
         if (cursor == NULL)
@@ -51,8 +52,8 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     int hash;
-    hash = int(toupper(word[0]) - "A");
-    return hash;
+    hash_word = int(toupper(word[0]) - "A");
+    return hash_word;
 }
 
 /*
@@ -81,9 +82,9 @@ bool load(const char *dictionary)
     FILE *DICT = fopen(dictionary, "r");
     char *dict_word = malloc(LENGTH + 1);
     // fread(dict, sizeof(char), 1, DICT);
-    if (dict == NULL)
+    if (dict_word == NULL)
     {
-        fclose(dictionary);
+        fclose(DICT);
         free(dict_word);
         return false;
     }
@@ -101,7 +102,7 @@ bool load(const char *dictionary)
         word_node->next = table[hash(dict_word)]->next;
         table[hash(dict_word)] = word_node;
     }
-    fclose(dictionary);
+    fclose(DICT);
     free(dict_word);
     return true;
 }
