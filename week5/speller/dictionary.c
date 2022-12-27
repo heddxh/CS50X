@@ -35,8 +35,18 @@ unsigned int count = 0;
 bool check(const char *word)
 {
     int hash = hash(word);
-
+    char *origin = word;
+    if (strcasecmp(word, origin) == 0)
+    {
+        return true;
+    }
+    else
+    {
+        check(table[hash]->word);
+    }
+    return false;
 }
+
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
