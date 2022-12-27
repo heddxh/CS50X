@@ -53,7 +53,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     int hash_word;
-    hash_word = int(toupper(word[0]) - "A");
+    hash_word = atoi(toupper(word[0]) - "A");
     return hash_word;
 }
 
