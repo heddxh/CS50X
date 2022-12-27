@@ -36,7 +36,8 @@ bool check(const char *word)
 {
     int hash = hash(word);
     char *origin = word;
-    if (strcasecmp(word, origin) == 0)
+    node *cursor = table[hash];
+    if (strcasecmp(cursor, origin) == 0)
     {
         return true;
     }
