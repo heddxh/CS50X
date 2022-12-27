@@ -29,7 +29,7 @@ const unsigned int N = SIZE_OF_ALPHABET;
 
 node *taleb[N];
 
-int count = 0;
+unsigned int count = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -96,12 +96,14 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     int size = 0;
-
+    return count;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO:
+    free(dict_word);
+
+
     return false;
 }
