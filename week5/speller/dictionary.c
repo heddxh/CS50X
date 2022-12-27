@@ -79,11 +79,12 @@ void unhash(const char *word)
 bool load(const char *dictionary)
 {
     FILE *DICT = fopen(dictionary, "r");
-    char *dict_word = malloc(sizeof(LENGTH + 1));
+    char *dict_word = malloc(LENGTH + 1);
     // fread(dict, sizeof(char), 1, DICT);
     if (dict == NULL)
     {
         fclose(dictionary);
+        free(dict_word);
         return false;
     }
 
@@ -101,6 +102,7 @@ bool load(const char *dictionary)
         table[hash(dict_word)] = word_node;
     }
     fclose(dictionary);
+    free(dict_word);
     return true;
 }
 
@@ -114,6 +116,5 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    free();
     return true;
 }
