@@ -12,7 +12,7 @@
 // Represents a node in a hash table
 typedef struct node
 {
-    char *word[LENGTH+1];
+    const char *word[LENGTH+1];
     struct node *next;
 }
 node;
@@ -53,7 +53,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     int hash_word;
-    hash_word = atoi(toupper(word[0]) - "A");
+    hash_word = toupper(word[0]) - "A";
     return hash_word;
 }
 
