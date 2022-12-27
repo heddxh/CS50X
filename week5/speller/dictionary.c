@@ -10,7 +10,7 @@
 // Represents a node in a hash table
 typedef struct node
 {
-    char word[LENGTH];
+    char *word[LENGTH+1];
     struct node *next;
 }
 node;
@@ -35,7 +35,7 @@ unsigned int count = 0;
 bool check(const char *word)
 {
     int hash = hash(word);
-    strcasecmp(word, table[hash]->word)
+
 }
 // Hashes word to a number
 unsigned int hash(const char *word)
