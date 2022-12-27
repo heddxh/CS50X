@@ -35,15 +35,15 @@ unsigned int count = 0;
 bool check(const char *word)
 {
     int hash = hash(word);
+    char *origin = word;
     if (scrcasecmp(word, table[hash]->word) == 0)
     {
         return true;
     }
-    else if (strcasecmp(word, table[hash]->next->word) == 1)
+    else
     {
-        return true;
+        check()
     }
-    else 
 }
 
 // Hashes word to a number
