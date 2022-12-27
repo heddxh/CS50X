@@ -90,7 +90,7 @@ bool load(const char *dictionary)
 
     while (fscanf(DICT, "%s", dict_word) != EOF)
     {
-        node *word_node;
+        node *word_node == malloc();
         if (word_node == NULL)
         {
             return false;
