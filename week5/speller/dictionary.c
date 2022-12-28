@@ -14,9 +14,7 @@ typedef struct node
 {
     char *word[LENGTH + 1];
     struct node *next;
-}
-node;
-
+} node;
 
 /*typedef struct node
 {
@@ -38,7 +36,7 @@ bool check(const char *word)
 {
     int hash_word = hash(word);
     node *cursor = table[hash_word];
-    while(strcasecmp(word, cursor->word) != 0)
+    while (strcasecmp(word, cursor->word) != 0)
     {
         cursor = cursor->next;
         if (cursor == NULL)
