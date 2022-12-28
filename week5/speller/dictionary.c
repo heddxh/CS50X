@@ -89,7 +89,6 @@ bool load(const char *dictionary)
     while (fscanf(DICT, "%s", dict_word) != EOF)
     {
         node *word_node = malloc(sizeof(node));
-        hash_word = hash(dict_word);
         if (word_node == NULL)
         {
             fclose(DICT);
@@ -100,7 +99,7 @@ bool load(const char *dictionary)
 
         strcpy(word_node->word, dict_word);
         count++;
-        word_node->next = table[hash(dict_word)];
+        word_node->next = table[hash(dict_word)]->next;
         table[hash(dict_word)] = word_node;
     }
     fclose(DICT);
