@@ -85,7 +85,7 @@ bool load(const char *dictionary)
         free(dict_word);
         return false;
     }
-
+    
     while (fscanf(DICT, "%s", dict_word) != EOF)
     {
         node *word_node = malloc(sizeof(node));
