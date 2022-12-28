@@ -103,6 +103,7 @@ bool load(const char *dictionary)
         table[hash(dict_word)] = word_node;
         free(word_node);
     }
+
     fclose(DICT);
     free(dict_word);
     return true;
