@@ -103,9 +103,10 @@ bool load(const char *dictionary)
         if (table(hash_word) != NULL)
         {
             word_node->next = table[hash(dict_word)]->next;
+            table[hash(dict_word)] = word_node;
         }
 
-        table[hash(dict_word)] = word_node;
+
     }
     fclose(DICT);
     free(dict_word);
