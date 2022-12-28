@@ -27,9 +27,7 @@ node;
 // Choose number of buckets in hash table
 const unsigned int N = SIZE_OF_ALPHABET;
 
-node *table[N];
 
-unsigned int count = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
