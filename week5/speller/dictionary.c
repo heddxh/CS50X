@@ -91,6 +91,9 @@ bool load(const char *dictionary)
         node *word_node = malloc(sizeof(node));
         if (word_node == NULL)
         {
+            fclose(DICT);
+            free(dict_word);
+            free(word_node);
             return false;
         }
 
