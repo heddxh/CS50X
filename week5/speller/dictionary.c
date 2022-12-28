@@ -100,8 +100,11 @@ bool load(const char *dictionary)
 
         strcpy(word_node->word, dict_word);
         count++;
-        
-        word_node->next = table[hash(dict_word)]->next;
+        if (table(hash_word) != NULL)
+        {
+            word_node->next = table[hash(dict_word)]->next;
+        }
+
         table[hash(dict_word)] = word_node;
     }
     fclose(DICT);
