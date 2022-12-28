@@ -35,6 +35,10 @@ unsigned int count = 0;
 bool check(const char *word)
 {
     int hash_word = hash(word);
+    if (table[hash_word])
+    {
+        
+    }
     node *cursor = table[hash_word];
     while (strcasecmp(word, cursor->word) != 0)
     {
@@ -85,7 +89,7 @@ bool load(const char *dictionary)
         free(dict_word);
         return false;
     }
-    
+
     while (fscanf(DICT, "%s", dict_word) != EOF)
     {
         node *word_node = malloc(sizeof(node));
