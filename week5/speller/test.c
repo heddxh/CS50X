@@ -8,7 +8,7 @@ typedef struct node
 
 int main(void)
 {
-    node *test = malloc(sizeof(node));
+    node *test = NULL;
     test->a = 1;
     printf("%i\n", test->a);
 }
