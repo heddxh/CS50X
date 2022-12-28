@@ -12,7 +12,7 @@
 // Represents a node in a hash table
 typedef struct node
 {
-    char *word[LENGTH + 1];
+    char word[LENGTH + 1];
     struct node *next;
 } node;
 
