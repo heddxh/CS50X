@@ -128,10 +128,10 @@ bool unload(void)
         if (table[i] != NULL)
         {
             node *cursor = table[i]->next;
-            while true
+            while (cursor != NULL)
             {
-                
-            }
+                free(cursor);
+                cursor = cursor->next;
             }
         }
     }
