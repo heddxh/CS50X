@@ -131,10 +131,6 @@ bool unload(void)
             while (cursor != NULL)
             {
                 free(cursor);
-                if (cursor->next == NULL)
-                {
-                    break;
-                }
                 cursor = cursor->next;
             }
         }
