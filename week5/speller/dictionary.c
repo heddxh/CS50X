@@ -106,7 +106,6 @@ bool load(const char *dictionary)
         count++;
         word_node->next = table[hash(dict_word)];
         table[hash(dict_word)] = word_node;
-        free(word_node);
     }
 
     fclose(DICT);
