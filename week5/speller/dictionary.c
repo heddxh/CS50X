@@ -130,8 +130,9 @@ bool unload(void)
             node *cursor = table[i]->next;
             while (cursor != NULL)
             {
+                node *next_cursor = cursor->next;
                 free(cursor);
-                cursor = cursor->next;
+                cursor = next_cursor;
             }
         }
     }
