@@ -130,11 +130,7 @@ bool unload(void)
             node *cursor = table[i]->next;
             while true
             {
-                if (cursor->next == NULL)
-                {
-                    break;
-                }
-                else
+                
             }
             }
         }
