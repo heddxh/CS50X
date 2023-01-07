@@ -16,3 +16,4 @@ Less than 1000 times
 Suppose you're charged a fee for each second of compute time your program uses.
 After how many simulations would you call the predictions "good enough"?:
 
+1000 times
