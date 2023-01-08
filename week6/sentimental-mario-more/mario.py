@@ -7,3 +7,5 @@ while True:
     else:
         print('Please type a int between 1 and 8')
 
+for i in range(n):
+    print("#", end='')
