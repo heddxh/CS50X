@@ -25,9 +25,9 @@ def check_sum(card):
     sum = 0
     length = len(card)
     for i in range(length-2, 0, -2):
-        sum += card[i] * 2
+        sum += int(card[i]) * 2
     for i in range(length-1, 0, -2):
-        sum += card[i]
+        sum += int(card[i])
     if sum % 10 == 0:
         return True
     else:
