@@ -17,6 +17,8 @@ for i in range(count_word):
 L = count_letter / count_word * 100
 S = count_sentence / count_word * 100
 
+print(count_letter, count_word, count_sentence)
+
 index = round(0.0588 * L - 0.296 * S - 15.8)
 
 if index >= 16:
