@@ -15,6 +15,11 @@ for i in range(count_word):
 L = count_letter / count_word * 100
 S = count_sentence / count_word * 100
 
-index = 0.0588 * L - 0.296 * S - 15.8
+index = round(0.0588 * L - 0.296 * S - 15.8)
 
-print()
+if index >= 16:
+    print('Grade 16+')
+elif index < 1:
+    print('Before Grade 1')
+else:
+    print(f'Grade {index}')
