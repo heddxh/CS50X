@@ -2,6 +2,9 @@ from cs50 import get_string
 
 def main():
     len = 0
+    card = get_card()
+    if check(sum) == False:
+        print('
 
 def get_card():
     while True:
@@ -41,4 +44,23 @@ def check_len(card):
             return 'invalid'
 
 def is_amex(card):
-    start2 = card[0:]
+    start2 = card[0:2]
+    if start2 == 34 or start2 == 37:
+        return True
+    else:
+        return False
+
+def is_visa(card):
+    start = card[0]
+    if start == 4:
+        return True
+    else:
+        return False
+
+def is_mast(card):
+    if card[0] == 5 and card[1] in ['1', '2', '3', '4', '5']:
+        return True
+    else:
+        return false
+
+main()
