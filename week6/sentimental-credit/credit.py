@@ -23,6 +23,7 @@ def get_card():
             return card
 
 def check_sum(card):
+    sum = 0
     for i in range(card_len-2, 0, -2):
         sum += card[i] * 2
     for i in range(card_len-1, 0, -2):
