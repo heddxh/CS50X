@@ -10,8 +10,11 @@ count_sentence = 0
 
 for i in range(count_word):
     if words[i].isalpha() == False:
-        count_letter += len(words[i]) - 1
-        if
+        for letter in words[i]:
+            if letter.isalpha():
+                count_letter += 1
+            elif letter in '.?!':
+                count_sentence += 1
     else:
         count_letter += len(words[i])
 
