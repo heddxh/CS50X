@@ -78,7 +78,7 @@ def is_visa(card):
         return False
 
 def is_mast(card):
-    if int(card[0]) == 5 and card[1] in ['1', '2', '3', '4', '5']:
+    if int(card[0]) == 5 and card[1] in '12345':
         return True
     else:
         return False
