@@ -64,8 +64,8 @@ def check_len(card):
             return 'invalid'
 
 def is_amex(card):
-    start2 = int(card[0:2])
-    if start2 == 34 or start2 == 37:
+    start2 = card[0:2]
+    if start2 in ['34', '37']:
         return True
     else:
         return False
