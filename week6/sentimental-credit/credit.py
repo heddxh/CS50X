@@ -16,7 +16,7 @@ def check_sum(card):
         sum += card[i] * 2
     for i in range(len-1, 0, -2):
         sum += card[i]
-    if sum[-1] = '0':
+    if sum[-1] == '0':
         return True
     else:
         return False
