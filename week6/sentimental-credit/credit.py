@@ -1,5 +1,6 @@
 from cs50 import get_string
 
+
 def main():
     card = get_card()
     if check_sum(card) == False:
@@ -15,11 +16,13 @@ def main():
         else:
             print('INVALID')
 
+
 def get_card():
     while True:
         card = get_string('Number: ')
         if card.isdigit():
             return card
+
 
 def check_sum(card):
     sum = 0
@@ -39,11 +42,12 @@ def check_sum(card):
     for i in range(length-1, 0, -2):
         sum += int(card[i])
     if length % 2 == 1:
-            sum += int(card[0])
+        sum += int(card[0])
     if sum % 10 == 0:
         return True
     else:
         return False
+
 
 def check_len(card):
     length = len(card)
@@ -65,12 +69,14 @@ def check_len(card):
         else:
             return 'invalid'
 
+
 def is_amex(card):
     start2 = card[0:2]
     if start2 in ['34', '37']:
         return True
     else:
         return False
+
 
 def is_visa(card):
     start = int(card[0])
@@ -79,10 +85,12 @@ def is_visa(card):
     else:
         return False
 
+
 def is_mast(card):
     if int(card[0]) == 5 and card[1] in '12345':
         return True
     else:
         return False
+        
 
 main()
