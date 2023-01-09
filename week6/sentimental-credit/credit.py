@@ -36,12 +36,10 @@ def check_sum(card):
             sum += temp % 10 + temp // 10
         else:
             sum += temp
-    print(sum)
     for i in range(length-1, 0, -2):
         sum += int(card[i])
-        if length % 2 == 1:
+    if length % 2 == 1:
             sum += int(card[0])
-    print(sum)
     if sum % 10 == 0:
         return True
     else:
