@@ -3,8 +3,18 @@ from cs50 import get_string
 def main():
     len = 0
     card = get_card()
-    if check(sum) == False:
-        print('
+    if check_sum(card) == False:
+        print('INVALID')
+    else:
+        len_result = check_len(card)
+        if len_result == 'amex':
+            print('AMEX')
+        elif len_result == 'visa':
+            print('VISA')
+        elif len_result == 'mast':
+            print('MASTERCARD')
+        else:
+            print('INVALID')
 
 def get_card():
     while True:
@@ -61,6 +71,6 @@ def is_mast(card):
     if card[0] == 5 and card[1] in ['1', '2', '3', '4', '5']:
         return True
     else:
-        return false
+        return False
 
 main()
