@@ -24,7 +24,7 @@ def get_card():
 def check_sum(card):
     sum = 0
     length = len(card)
-    for i in range(length-2, 0, -2):
+    for i in range(length-2, -1, -2):
         sum += int(card[i]) * 2
     print(sum)
     for i in range(length-1, 0, -2):
