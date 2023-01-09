@@ -23,8 +23,17 @@ def check_sum(card):
 
 def check_len(card):
     if len == 15:
-        is_amex(card)
+        if is_amex(card):
+            return 'amex'
+        else:
+            return 'invalid'
     elif len == 13:
-        is_visa(card)
+        if is_visa(card):
+            return 'visa'
+        else:
+            return 'invalid'
     elif len == 16:
-        if is_visa
+        if is_visa(card):
+            return 'visa'
+        elif is 
+
