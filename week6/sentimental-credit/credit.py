@@ -25,14 +25,27 @@ def check_sum(card):
     sum = 0
     length = len(card)
     for i in range(length-2, 0, -2):
-        if
-        sum += int(card[i]) * 2
+        if int(card[i]) > 9:
+            sum += int(card[i]) % 10 * 2 + int(card[i]) // 10 * 2
+        else:
+            sum += int(card[i]) * 2
     if length % 2 == 0:
-        sum += int(card[0])
+        if int(card[0]) > 9:
+            sum += int(card[0]) % 10 * 2 + int(card[0]) // 10 * 2
+        else:
+            sum += int(card[0]) * 2
+    print(sum)
     for i in range(length-1, 0, -2):
-        sum += int(card[i])
+        if int(card[i]) > 9:
+            sum += int(card[i]) % 10 + int(card[i]) // 10
+        else:
+            sum += int(card[i])
     if length % 2 == 0:
-        sum += int(card[0])
+        if int(card[0]) > 9:
+            sum += int(card[0]) % 10 + int(card[0]) // 10
+        else:
+            sum += int(card[0]) * 2
+    print(sum)
     if sum % 10 == 0:
         return True
     else:
