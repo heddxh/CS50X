@@ -1,7 +1,7 @@
 from cs50 import get_string
 
 def main():
-    card_len = 0
+    global card_len
     card = get_card()
     if check_sum(card) == False:
         print('INVALID')
