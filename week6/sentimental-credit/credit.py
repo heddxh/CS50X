@@ -35,5 +35,10 @@ def check_len(card):
     elif len == 16:
         if is_visa(card):
             return 'visa'
-        elif is 
+        elif is_mast(card):
+            return 'mast'
+        else:
+            return 'invalid'
 
+def is_amex(card):
+    start2 = card[0:]
