@@ -1,7 +1,6 @@
 from cs50 import get_string
 
 def main():
-    global card_len
     card = get_card()
     if check_sum(card) == False:
         print('INVALID')
@@ -72,4 +71,5 @@ def is_mast(card):
     else:
         return False
 
+card_len = 0
 main()
