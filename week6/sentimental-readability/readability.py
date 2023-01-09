@@ -4,6 +4,8 @@ from cs50 import get_string
 text = get_string('Text:')
 words = text.split()
 count_word = len(words)
+count_letter = 0
+count_sentence = 0
 
 for i in range(count_word):
     if words[i].isalpha():
