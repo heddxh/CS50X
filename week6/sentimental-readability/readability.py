@@ -7,6 +7,7 @@ count_word = len(words)
 count_letter = 0
 count_sentence = 0
 
+
 for i in range(count_word):
     if words[i][-1] in '.?!':
         count_letter += len(words[i]) - 1
@@ -17,7 +18,6 @@ for i in range(count_word):
 L = count_letter / count_word * 100
 S = count_sentence / count_word * 100
 
-print(count_letter, count_word, count_sentence)
 
 index = round(0.0588 * L - 0.296 * S - 15.8)
 
