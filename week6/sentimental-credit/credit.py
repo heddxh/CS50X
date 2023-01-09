@@ -1,6 +1,7 @@
 from cs50 import get_string
 
 def main():
+    len_result = 0
     card = get_card()
     if check_sum(card) == False:
         print('INVALID')
@@ -24,9 +25,9 @@ def get_card():
 
 def check_sum(card):
     sum = 0
-    for i in range(card_len-2, 0, -2):
+    for i in range(len_result-2, 0, -2):
         sum += card[i] * 2
-    for i in range(card_len-1, 0, -2):
+    for i in range(len_result-1, 0, -2):
         sum += card[i]
     if sum % 10 == 0:
         return True
@@ -34,7 +35,7 @@ def check_sum(card):
         return False
 
 def check_len(card):
-    if card_len == 15:
+    if len_result == 15:
         if is_amex(card):
             return 'amex'
         else:
@@ -72,5 +73,4 @@ def is_mast(card):
     else:
         return False
 
-card_len = 0
 main()
