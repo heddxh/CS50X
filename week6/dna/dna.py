@@ -34,6 +34,8 @@ def main():
         if is_dict_in(db[i], result) == 1:
             print(name)
             return
+        else:
+            print(is_dict_in(db[i], result))
     print(f'No match {is_dict_in(db[i], result)}')
     return
 
