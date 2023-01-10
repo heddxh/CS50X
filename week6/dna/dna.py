@@ -24,6 +24,7 @@ def main():
 
     # Check database for matching profiles
     for i in range(len(db)):
+        
         if db[i]
 
 
