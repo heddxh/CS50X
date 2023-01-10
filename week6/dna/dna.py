@@ -18,14 +18,12 @@ def main():
 
     # Find longest match of each STR in DNA sequence
     keys = list(db)
-    len_keys = len(keys)
-    for i in range(len_keys):
-        
-    longest_match(seq, )
+    for str in keys[1:]:
+        count = longest_match(seq, str)
 
-    # TODO: Check database for matching profiles
-
-    return
+    # Check database for matching profiles
+    
+    return 0
 
 
 def longest_match(sequence, subsequence):
