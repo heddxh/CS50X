@@ -14,7 +14,7 @@ def main():
         DB = csv.DictReader(DB_FILE)
         for row in DB:
             db.append(row)
-        strs =
+        strs = DB.fieldnames
 
     # Read DNA sequence file into a variable
     with open(sys.argv[2]) as SEQ_FILE:
