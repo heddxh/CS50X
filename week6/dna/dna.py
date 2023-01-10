@@ -9,11 +9,11 @@ def main():
         sys.exit('Usage: python dna.py data.csv sequence.txt')
 
     # Read database file into a variable
-    with open(argv[1]) as DB_FILE:
+    with open(sys.argv[1]) as DB_FILE:
         db = csv.DictReader(DB_FILE)
 
     # Read DNA sequence file into a variable
-    with open(argv[2]) as SEQ_FILE:
+    with open(sys.argv[2]) as SEQ_FILE:
         seq = SEQ_FILE.read()
 
     # Find longest match of each STR in DNA sequence
