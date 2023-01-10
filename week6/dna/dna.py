@@ -82,6 +82,7 @@ def is_dict_in(d1, d2):
     '''Check if Dict d1 is in Dict d2. If so, return True'''
     for key in d1:
         temp = d2.get(key)
+        print(temp)
         if temp == None:
             return 2
         elif temp != d1[key]:
