@@ -32,8 +32,10 @@ def main():
         # Cant use db[i] in result since Dict is unhashable
         if is_dict_in(db[i], result):
             print(name)
+            return 
         else:
             print('No match')
+            return
 
 
 def longest_match(sequence, subsequence):
