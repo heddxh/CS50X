@@ -20,10 +20,10 @@ def main():
     result ={}
     keys = list(db)
     for str in keys[1:]:
-        count = longest_match(seq, str)
-        result[]
-    # Check database for matching profiles
+        result[str] = longest_match(seq, str)
 
+    # Check database for matching profiles
+    for
     return 0
 
 
