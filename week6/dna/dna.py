@@ -29,7 +29,8 @@ def main():
     for i in range(len(db)):
         name = db[i]['name']
         del db[i]['name']
-        if db[i] in result:
+        # Cant use db[i] in result since Dict is unhashable
+        if is_dict_in(db[i], result):
             print(name)
         else:
             print('No match')
@@ -71,6 +72,10 @@ def longest_match(sequence, subsequence):
 
     # After checking for runs at each character in seqeuence, return longest run found
     return longest_run
+
+def is_dict_in(d1, d2):
+    '''Check if Dict d1 is in Dict d2. If so, return True'''
+    
 
 
 if __name__ == '__main__':
