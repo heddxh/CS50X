@@ -17,12 +17,13 @@ def main():
         seq = SEQ_FILE.read()
 
     # Find longest match of each STR in DNA sequence
+    result ={}
     keys = list(db)
     for str in keys[1:]:
         count = longest_match(seq, str)
-
+        result[]
     # Check database for matching profiles
-    
+
     return 0
 
 
