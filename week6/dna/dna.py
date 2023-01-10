@@ -23,7 +23,7 @@ def main():
         result[str] = longest_match(seq, str)
 
     # Check database for matching profiles
-    for
+    if  result in 
     return 0
 
 
