@@ -4,7 +4,8 @@ import sys
 
 def main():
 
-    # TODO: Check for command-line usage
+    #Check for command-line usage
+    
 
     # TODO: Read database file into a variable
 
@@ -55,4 +56,5 @@ def longest_match(sequence, subsequence):
     return longest_run
 
 
-main()
+if __name__ == '__main__':
+    main()
