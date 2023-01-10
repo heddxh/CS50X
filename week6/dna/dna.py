@@ -23,8 +23,8 @@ def main():
         result[str] = longest_match(seq, str)
 
     # Check database for matching profiles
-    if  result in 
-    return 0
+    if result in db:
+        print(')
 
 
 def longest_match(sequence, subsequence):
