@@ -32,7 +32,7 @@ def main():
         del db[i]['name']
         # Cant use db[i] in result since Dict is unhashable
         print(f'result: {result}')
-        if is_dict_in(db[i], result):
+        if is_dict_in(db[i], result)= == 1:
             print(name)
             return
         else:
@@ -83,11 +83,11 @@ def is_dict_in(d1, d2):
     for key in d1:
         temp = d2.get(key)
         if temp == None:
-            return 1
-        elif temp != d1[key]:
             return 2
+        elif temp != d1[key]:
+            return 3
         else:
-            return 0
+            return 1
 
 
 if __name__ == '__main__':
