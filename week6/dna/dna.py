@@ -79,7 +79,10 @@ def is_dict_in(d1, d2):
         temp = d2.get(key)
         if temp == None:
             return False
-        elif temp
+        elif temp != d1[key]:
+            return False
+        else:
+            return True
 
 
 if __name__ == '__main__':
