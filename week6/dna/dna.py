@@ -86,8 +86,7 @@ def is_dict_in(d1, d2):
             return 2
         elif temp != d1[key]:
             return 3
-        else:
-            return 1
+    return 1
 
 
 if __name__ == '__main__':
