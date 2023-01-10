@@ -24,8 +24,12 @@ def main():
 
     # Check database for matching profiles
     for i in range(len(db)):
-        
-        if db[i]
+        name = db[i]['name']
+        del db[i]['name']
+        if db[i] in result:
+            print(name)
+        else:
+            print('No match')
 
 
 def longest_match(sequence, subsequence):
