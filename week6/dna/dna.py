@@ -14,9 +14,10 @@ def main():
 
     # Read DNA sequence file into a variable
     with open(argv[2]) as SEQ_FILE:
-        seq = 
+        seq = SEQ_FILE.read()
 
-    # TODO: Find longest match of each STR in DNA sequence
+    # Find longest match of each STR in DNA sequence
+    longest_match()
 
     # TODO: Check database for matching profiles
 
