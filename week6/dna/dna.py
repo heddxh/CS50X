@@ -30,6 +30,7 @@ def main():
         name = db[i]['name']
         del db[i]['name']
         # Cant use db[i] in result since Dict is unhashable
+        print(result)
         if is_dict_in(db[i], result):
             print(name)
             return
