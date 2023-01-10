@@ -14,7 +14,7 @@ def main():
         DB = csv.DictReader(DB_FILE)
         for row in DB:
             db.append(row)
-        strs = DB.fieldnames
+        strs = DB.fieldnames # 在这里直接加上.pop(0)会变成[n,a,m,e]???????
         strs.pop(0)
 
     # Read DNA sequence file into a variable
@@ -31,12 +31,12 @@ def main():
         name = db[i]['name']
         del db[i]['name']
         # Cant use db[i] in result since Dict is unhashable
-        print(result)
+        print(f'result: {result}')
         if is_dict_in(db[i], result):
             print(name)
             return
         else:
-            print('No match')
+            print(f'No match {is_dict_in(db[i], result)}')
             return
 
 
@@ -83,11 +83,11 @@ def is_dict_in(d1, d2):
     for key in d1:
         temp = d2.get(key)
         if temp == None:
-            return False
+            return 1
         elif temp != d1[key]:
-            return False
+            return 2
         else:
-            return True
+            return 0
 
 
 if __name__ == '__main__':
