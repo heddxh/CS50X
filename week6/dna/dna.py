@@ -35,10 +35,8 @@ def main():
         if is_dict_in(db[i], result) == 1:
             print(name)
             return
-        else:
-            print(f'No match {is_dict_in(db[i], result)}')
-            return
-
+    print(f'No match {is_dict_in(db[i], result)}')
+    return
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
