@@ -75,7 +75,8 @@ def longest_match(sequence, subsequence):
 
 def is_dict_in(d1, d2):
     '''Check if Dict d1 is in Dict d2. If so, return True'''
-    
+    if list(d1) in list(d2):
+        if 
 
 
 if __name__ == '__main__':
