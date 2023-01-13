@@ -26,8 +26,6 @@ def main():
     for str in strs:
         result[str] = longest_match(seq, str)
 
-    print(result)
-
     # Check database for matching profiles
     for i in range(len(db)):
         name = db[i]['name']
@@ -87,10 +85,8 @@ def is_dict_in(d1, d2):
         temp = d2.get(key)
         if temp == None or temp != int(d1[key]):
             return False
-        else:
-            return True
 
-    return 1
+    return True
 
 
 if __name__ == '__main__':
