@@ -31,12 +31,13 @@ def main():
         name = db[i]['name']
         del db[i]['name']
         # Cant use db[i] in result since Dict is unhashable
-        if is_dict_in(db[i], result) == 1:
+        return_number = is_dict_in(db[i], result)
+        if return_number == 1:
             print(name)
             return
         else:
-            print(is_dict_in(db[i], result))
-            
+            print(return_number)
+
     print(f'No match {is_dict_in(db[i], result)}')
     return
 
