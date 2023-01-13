@@ -4,7 +4,7 @@ import sys
 
 def main():
 
-    #Check for command-line usage
+    # Check for command-line usage
     if len(sys.argv) != 3:
         sys.exit('Usage: python dna.py data.csv sequence.txt')
 
@@ -14,7 +14,7 @@ def main():
         DB = csv.DictReader(DB_FILE)
         for row in DB:
             db.append(row)
-        strs = DB.fieldnames # 在这里直接加上.pop(0)会变成[n,a,m,e]???????
+        strs = DB.fieldnames  # 在这里直接加上.pop(0)会变成[n,a,m,e]???????
         strs.pop(0)
 
     # Read DNA sequence file into a variable
@@ -22,7 +22,7 @@ def main():
         seq = SEQ_FILE.read()
 
     # Find longest match of each STR in DNA sequence
-    result ={}
+    result = {}
     for str in strs:
         result[str] = longest_match(seq, str)
 
@@ -38,6 +38,7 @@ def main():
 
     print('No match')
     return
+
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
@@ -84,7 +85,7 @@ def is_dict_in(d1, d2):
         temp = d2.get(key)
         if temp == None or temp != int(d1[key]):
             return False
-        else :
+        else:
             return True
 
     return 1
