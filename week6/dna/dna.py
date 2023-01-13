@@ -88,6 +88,7 @@ def is_dict_in(d1, d2):
         if temp == None:
             return 2
         elif temp != d1[key]:
+            print(type(temp), type(d1[key]))
             return 3
     return 1
 
