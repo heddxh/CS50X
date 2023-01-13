@@ -26,11 +26,13 @@ def main():
     for str in strs:
         result[str] = longest_match(seq, str)
 
+    print(result)
+
     # Check database for matching profiles
     for i in range(len(db)):
         name = db[i]['name']
         del db[i]['name']
-        # Cant use db[i] in result since Dict is unhashable
+        # Cant use `db[i] in result` since Dict is unhashable
         is_in = is_dict_in(db[i], result)
         if is_in:
             print(name)
