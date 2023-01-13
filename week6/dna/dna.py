@@ -38,7 +38,7 @@ def main():
         else:
             print(return_number)
 
-    print(f'No match {is_dict_in(db[i], result)}')
+    print('No match')
     return
 
 def longest_match(sequence, subsequence):
@@ -81,15 +81,14 @@ def longest_match(sequence, subsequence):
 
 def is_dict_in(d1, d2):
     '''Check if Dict d1 is in Dict d2. If so, return True'''
-    print(d1,d2)
+
     for key in d1:
         temp = d2.get(key)
-        print(f'{key}: {temp}')
         if temp == None:
             return 2
-        elif temp != d1[key]:
-            print(type(temp), type(d1[key]))
+        elif temp != int(d1[key]):
             return 3
+
     return 1
 
 
