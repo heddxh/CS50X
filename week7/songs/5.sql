@@ -1,0 +1,1 @@
+SELECT SUM(energy) / COUNT(*) AS "average energy" FROM songs;
