@@ -1,5 +1,5 @@
 SELECT title FROM people
-  JOIN stars ON stars.people_id = people.id
+  JOIN stars ON stars.person_id = people.id
   JOIN movies ON movies.id = stars.movie_id
   JOIN ratings ON ratings.movie_id = stars.movie_id
  WHERE people.name = "Chadwick Boseman"
