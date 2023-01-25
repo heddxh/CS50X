@@ -13,3 +13,9 @@ SELECT title FROM movies
                         (SELECT id FROM people
                             WHERE name = "Helena Bonham Carter")
                 ));
+
+SELECT title FROM people
+    JOIN stars ON people.id = stars.person_id
+    JOIN shows ON stars.show_id = shows.id
+    WHERE name = "Steve Carell";
+
