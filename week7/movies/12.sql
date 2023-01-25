@@ -12,5 +12,4 @@ SELECT title FROM movies
                     WHERE person_id IN
                         (SELECT id FROM people
                             WHERE name = "Helena Bonham Carter")
-                ))
-    ON 
+                ));
