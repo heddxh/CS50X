@@ -92,4 +92,8 @@ SELECT name FROM people
 
 -- 查询通话记录接听者身份
 SELECT name FROM people
-  JOIN phone_calls ON caller = 
+ WHERE phone_number = (SELECT receiver FROM phone_calls
+                        WHERE year = 2021 AND month = 7 AND day = 28
+                          AND caller = (SELECT phone_number FROM people
+                                         WHERE name = "Bruce"));
+-- 同伙 Robin
