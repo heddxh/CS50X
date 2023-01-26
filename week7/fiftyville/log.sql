@@ -54,4 +54,10 @@ SELECT * from airports
 -- 查询次日起飞最早航班
 SELECT * from flights
  WHERE origin_airport_id = 8
-   AND year = 2021 AND month = 7 AND day = 29;
+   AND year = 2021 AND month = 7 AND day = 29
+ ORDER BY hour
+ LIMIT 1;
+
+-- 找到上述二人中称作该航班的人
+SELECT * FROM passengers
+ WHERE flight_id = 36;
