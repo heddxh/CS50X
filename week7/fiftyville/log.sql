@@ -91,6 +91,5 @@ SELECT name FROM people
 -- 找到你了 Bruce!
 
 -- 查询通话记录接听者身份
-SELECT name FROM phone_calls
- WHERE year = 2021 AND month = 7 AND day = 28
-   AND 
+SELECT name FROM people
+  JOIN phone_calls ON caller = 
