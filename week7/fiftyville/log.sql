@@ -57,9 +57,19 @@ SELECT * from flights
    AND year = 2021 AND month = 7 AND day = 29
  ORDER BY hour
  LIMIT 1;
++----+-------------------+------------------------+------+-------+-----+------+--------+
+| id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
++----+-------------------+------------------------+------+-------+-----+------+--------+
+| 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
++----+-------------------+------------------------+------+-------+-----+------+--------+
 
--- 找到上述二人中称作该航班的人,合并查询
-SELECT * FROM people
+-- 查询目的地
+SELECT city FROM airports
+ WHERE id = 4;
+-- New York City
+
+-- 找到上述二人中称作该航班的人，合并查询，输出名字
+SELECT name FROM people
  WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs
                           WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10
                             AND minute BETWEEN 15 AND 25)
@@ -70,7 +80,17 @@ SELECT * FROM people
                                           AND transaction_type = "withdraw"))
    AND phone_number IN (SELECT caller FROM phone_calls
                          WHERE year = 2021 AND month = 7 AND day = 28
-                           AND duration < 60);
+                           AND duration < 60)
    AND passport_number IN (SELECT passport_number FROM passengers
-                            WHERE flight_id = 36);
+                            WHERE flight_id = (SELECT id from flights
+                                                WHERE origin_airport_id = (SELECT id from airports
+                                                                            WHERE city = "Fiftyville")
+                                                  AND year = 2021 AND month = 7 AND day = 29
+                                                ORDER BY hour
+                                                LIMIT 1));
+-- 找到你了 Bruce!
 
+-- 查询通话记录接听者身份
+SELECT name FROM phone_calls
+ WHERE year = 2021 AND month = 7 AND day = 28
+   AND 
