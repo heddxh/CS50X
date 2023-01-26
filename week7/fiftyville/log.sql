@@ -48,5 +48,5 @@ SELECT * FROM people
 +--------+-------+----------------+-----------------+---------------+
 
 -- 查询本地机场
-SELECT * from airpots
- WHERE origin_airport_id =
+SELECT * from airports
+ WHERE city = "Fiftyville";
