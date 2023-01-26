@@ -15,4 +15,8 @@ SELECT * FROM bakery_security_logs
  WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10
    AND minute BETWEEN 15 AND 25;
 
--- 查询当日上午
+-- 查询当日上午指定街道ATM取钱记录
+SELECT * FROM atm_transactions
+ WHERE year = 2021 AND month = 7 AND day = 28
+   AND atm_location = "Leggett Street"
+   AND transaction_type = "withdraw";
