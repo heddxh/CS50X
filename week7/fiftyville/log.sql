@@ -40,3 +40,13 @@ SELECT * FROM people
    AND phone_number IN (SELECT caller FROM phone_calls
                          WHERE year = 2021 AND month = 7 AND day = 28
                            AND duration < 60);
++--------+-------+----------------+-----------------+---------------+
+|   id   | name  |  phone_number  | passport_number | license_plate |
++--------+-------+----------------+-----------------+---------------+
+| 514354 | Diana | (770) 555-1861 | 3592750733      | 322W7JE       |
+| 686048 | Bruce | (367) 555-5533 | 5773159633      | 94KL13X       |
++--------+-------+----------------+-----------------+---------------+
+
+-- 查询本地机场
+SELECT * from airpots
+ WHERE origin_airport_id =
