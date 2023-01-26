@@ -38,4 +38,5 @@ SELECT * FROM people
                                           AND atm_location = "Leggett Street"
                                           AND transaction_type = "withdraw"))
    AND phone_number IN (SELECT caller FROM phone_calls
-                         WHERE year = 2021 AND month = 7 AND day = 28);
+                         WHERE year = 2021 AND month = 7 AND day = 28
+                           AND duration < 60);
