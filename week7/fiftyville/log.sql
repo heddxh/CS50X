@@ -50,3 +50,8 @@ SELECT * FROM people
 -- 查询本地机场
 SELECT * from airports
  WHERE city = "Fiftyville";
+
+-- 查询次日起飞最早航班
+SELECT * from flights
+ WHERE origin_airport_id = 8
+   AND year = 2021 AND month = 7 AND day = 29;
