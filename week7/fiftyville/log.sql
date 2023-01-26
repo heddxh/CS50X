@@ -23,7 +23,11 @@ SELECT * FROM atm_transactions
    AND atm_location = "Leggett Street"
    AND transaction_type = "withdraw";
 
--- 根据上述两次查询寻找共同的人
+-- 查询当日电话记录
+SELECT * FROM phone_calls
+ WHERE year = 2021 AND month = 7 AND day = 28;
+
+-- 根据上述三次查询寻找共同的人
 SELECT * FROM people
  WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs
                           WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10
@@ -32,4 +36,6 @@ SELECT * FROM people
                WHERE account_number IN(SELECT account_number FROM atm_transactions
                                         WHERE year = 2021 AND month = 7 AND day = 28
                                           AND atm_location = "Leggett Street"
-                                          AND transaction_type = "withdraw"));
+                                          AND transaction_type = "withdraw"))
+   AND phone_number IN (SELECT caller FROM phone_calls
+                         WHERE year = 2021 AND month = 7 AND day = 28);
