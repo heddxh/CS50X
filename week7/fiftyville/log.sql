@@ -10,6 +10,8 @@ SELECT * FROM interviews
  WHERE year = 2021 AND month = 7 AND day = 28
    AND transcript LIKE "%bakery%";
 
+-- As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
+
 -- 查询面包房案发十分钟(10:15-10:25)的记录
 SELECT * FROM bakery_security_logs
  WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10
