@@ -22,3 +22,9 @@ SELECT * FROM atm_transactions
  WHERE year = 2021 AND month = 7 AND day = 28
    AND atm_location = "Leggett Street"
    AND transaction_type = "withdraw";
+
+-- 根据上述两次查询寻找共同的人
+SELECT license_plate FROM bakery_security_logs
+
+ WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10
+   AND minute BETWEEN 15 AND 25;
