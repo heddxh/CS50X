@@ -58,6 +58,19 @@ SELECT * from flights
  ORDER BY hour
  LIMIT 1;
 
--- 找到上述二人中称作该航班的人
-SELECT * FROM passengers
- WHERE flight_id = 36;
+-- 找到上述二人中称作该航班的人,合并查询
+SELECT * FROM people
+ WHERE license_plate IN (SELECT license_plate FROM bakery_security_logs
+                          WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10
+                            AND minute BETWEEN 15 AND 25)
+   AND id IN (SELECT person_id FROM bank_accounts
+               WHERE account_number IN(SELECT account_number FROM atm_transactions
+                                        WHERE year = 2021 AND month = 7 AND day = 28
+                                          AND atm_location = "Leggett Street"
+                                          AND transaction_type = "withdraw"))
+   AND phone_number IN (SELECT caller FROM phone_calls
+                         WHERE year = 2021 AND month = 7 AND day = 28
+                           AND duration < 60);
+   AND passport_number IN (SELECT passport_number FROM passengers
+                            WHERE flight_id = 36);
+
