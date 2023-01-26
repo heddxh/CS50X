@@ -10,7 +10,7 @@ SELECT * FROM interviews
  WHERE year = 2021 AND month = 7 AND day = 28
    AND transcript LIKE "%bakery%";
 
--- 查询面包房10点到11点的记录
+-- 查询面包房案发十分钟的记录
 SELECT * FROM bakery_security_logs
- WHERE year = 2021 AND month = 7 AND day = 28
-   AND hour = 10;
+ WHERE year = 2021 AND month = 7 AND day = 28 AND hour = 10
+ 
