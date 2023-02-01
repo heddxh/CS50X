@@ -14,7 +14,16 @@
                 for (let i = 0; i < 4; i++)
                 {
                     buttons[i].addEventListener('click', function() {
-                        buttons[i].style.backgroundColor = 'red';
+                        if (i != 2)
+                        {
+                            buttons[i].style.backgroundColor = 'red';
+                            document.querySelector('#check').innerHTML = 'Incorrect';
+                        }
+                        else
+                        {
+                            buttons[i].style.backgroundColor = 'green';
+                            document.querySelector('#check').innerHTML = 'correct';
+                        }
                     });
                 }
             });
@@ -32,6 +41,7 @@
                 <hr>
                 <!-- Add multiple choice question here -->
                 <h3>Choose one from the following choices</h3>
+                <h2 id='check'></h2>
                 <button id="A">A</button>
                 <button id="B">B</button>
                 <button id="C">C</button>
