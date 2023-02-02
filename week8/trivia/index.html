@@ -13,12 +13,12 @@
 
                 // #1
                 let buttons = document.querySelectorAll('button');
-                let check = document.querySelector('#check');
-                check.addEventListener('click', function() {
+                let check1 = document.querySelector('#check1');
+                check1.addEventListener('click', function() {
                     buttons.forEach(function(currentValue) {
                         currentValue.disabled = false;
-                        currentValue.style.backgroundColor = 'white';
-                        document.querySelector('#check').innerHTML = '';
+                        currentValue.style.backgroundColor = '#d9edff';
+                        check1.innerHTML = '';
                     });
                 });
                 for (let i = 0; i < 4; i++)
@@ -32,12 +32,12 @@
                         if (i != 2)
                         {
                             buttons[i].style.backgroundColor = 'red';
-                            document.querySelector('#check').innerHTML = 'Incorrect';
+                            check1.innerHTML = 'Incorrect';
                         }
                         else
                         {
                             buttons[i].style.backgroundColor = 'green';
-                            document.querySelector('#check').innerHTML = 'correct';
+                            check1.innerHTML = 'Correct';
                         }
                     });
                 }
@@ -45,11 +45,18 @@
                 // #2
                 let form = document.querySelector('form');
                 let input = document.querySelector('#input');
+                let check2 = document.querySeletor('#check2');
                 form.addEventListener('submit', function(event) {
                     answer = input.value;
                     if (answer == 'paimon')
                     {
-                        
+                        input.style.color = 'green';
+                        check2.innerHTML = 'Correct';
+                    }
+                    else
+                    {
+                        input.style.color = 'red';
+                        check2.innerHTML = 'Incorrect';
                     }
                     event.preventDefault();
                 });
@@ -68,7 +75,7 @@
                 <hr>
                 <!-- Add multiple choice question here -->
                 <h3>Choose one from the following choices</h3>
-                <h2 id='check'></h2>
+                <h2 id='check1'></h2>
                 <button id="A">A</button>
                 <button id="B">B</button>
                 <button id="C">C</button>
@@ -80,7 +87,7 @@
                 <hr>
                 <!-- Add free response question here -->
                 <h3>Write down the name of our emergency food</h3>
-
+                <h2 id="check2"></h2>
                 <form>
                     <input type="text" autocomplete="off" id="input">
                     <input type="submit">
