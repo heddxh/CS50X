@@ -45,8 +45,9 @@
                 // #2
                 let form = document.querySelector('form');
                 let input = document.querySelector('#input');
-                form.addEventListener('submit', function(form) {
-                    alert(document.querySelector('#input').value);
+                form.addEventListener('submit', function(form, input) {
+                    //alert(document.querySelector('#input').value);
+                    alert(input.value);
                     form.preventDefault();
                 });
             });
