@@ -45,10 +45,10 @@
                 // #2
                 let form = document.querySelector('form');
                 let input = document.querySelector('#input');
-                form.addEventListener('submit', function(form, input) {
+                form.addEventListener('submit', function(event) {
                     //alert(document.querySelector('#input').value);
                     alert(input.value);
-                    form.preventDefault();
+                    event.preventDefault();
                 });
             });
 
