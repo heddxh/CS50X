@@ -52,9 +52,8 @@ button, input[type="submit"] {
 
 
 input[type="text"] {
-    line-height: 1.8;
+    line-height: 2;
     width: 25%;
-    height: 22.8px;
 }
 
 input[type="text"]:hover {
