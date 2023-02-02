@@ -44,8 +44,9 @@
 
                 // #2
                 let form = document.querySelector('form');
-                form.addEventListener('submit', function(form) {
-                    alert(form.value);
+                let input = document.query.Selector('#input');
+                form.addEventListener('submit', function(form, input) {
+                    alert(input.value);
                     form.preventDefault();
                 });
             });
@@ -77,7 +78,7 @@
                 <h3>Write down the name of our emergency food</h3>
 
                 <form>
-                    <input type="text" autocomplete="off" >
+                    <input type="text" autocomplete="off" id="input">
                     <input type="submit">
                 </form>
 
