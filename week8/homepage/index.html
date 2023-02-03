@@ -17,13 +17,11 @@
         document.addEventListener('DOMContentLoaded', function() {
           let cards = document.querySelectorAll('.card');
           cards.forEach(function(currentValue) {
-            currentValue.addEventListener('mouseover', function() {
+            currentValue.addEventListener('mouseenter', function() {
               currentValue.classList.add('shadow');
-              console.log('over');
             });
-            currentValue.addEventListener('mousemove', function() {
+            currentValue.addEventListener('mouseleave', function() {
               currentValue.classList.remove('shadow');
-              console.log('move');
             });
           });
         });
