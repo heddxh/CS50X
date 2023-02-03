@@ -18,10 +18,10 @@
           let cards = document.querySelectorAll('.card');
           cards.forEach(function(currentValue) {
             currentValue.addEventListener('mouseover', function() {
-              currentValue.className += ' shadow';
+              currentValue.classList.add('shadow');
             });
             currentValue.addEventListener('mousemove', function() {
-              currentValue.className -= 'shadow';
+              currentValue.classList.remove('shadow');
             });
           });
         });
