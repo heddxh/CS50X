@@ -17,7 +17,9 @@
         document.addEventListener('DOMContentLoaded', function() {
           let cards = document.querySelectorALL('.card');
           cards.forEach(function(currentValue) {
-            currentValue.className += ' shadow p-3 mb-5 bg-body rounded';
+            currentValue.addEventListener('mouseover', function() {
+              currentValue.className += ' shadow p-3 mb-5 bg-body rounded';
+            });
           });
         });
 
