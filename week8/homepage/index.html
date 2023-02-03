@@ -15,10 +15,12 @@
         <script>
 
         document.addEventListener('DOMContentLoaded', function() {
-          let cards = document.querySelectorALL('.card');
+          let cards = document.querySelectorAll('.card');
           cards.forEach(function(currentValue) {
             currentValue.addEventListener('mouseover', function() {
-              currentValue.className += ' shadow p-3 mb-5 bg-body rounded';
+              currentValue.className += ' shadow';
+            currentValue.addEventListener('mousemove', function() {
+              currentValue.className -= 'shadow';
             });
           });
         });
@@ -33,7 +35,7 @@
         <div class="container">
             <div class="row">
               <div class="col">
-                <div class="card">
+                <div class="card p-3">
                     <div class="card-body">
                       <h5 class="card-title">Blog</h5>
                       <p class="card-text">Some words here, don't be serious</p>
@@ -42,7 +44,7 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card shadow p-3 mb-5 bg-body rounded">
+                <div class="card p-3">
                     <div class="card-body">
                       <h5 class="card-title">书影音</h5>
                       <p class="card-text">Some words here, don't be serious</p>
@@ -51,7 +53,7 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card shadow p-3 mb-5 bg-body rounded">
+                <div class="card p-3">
                     <div class="card-body">
                       <h5 class="card-title">Memos</h5>
                       <p class="card-text">Some words here, don't be serious</p>
