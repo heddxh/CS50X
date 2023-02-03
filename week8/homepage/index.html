@@ -19,9 +19,11 @@
           cards.forEach(function(currentValue) {
             currentValue.addEventListener('mouseover', function() {
               currentValue.classList.add('shadow');
+              console.log('over');
             });
             currentValue.addEventListener('mousemove', function() {
               currentValue.classList.remove('shadow');
+              console.log('move');
             });
           });
         });
