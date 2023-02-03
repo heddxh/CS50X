@@ -18,10 +18,10 @@
           let cards = document.querySelectorAll('.card');
           cards.forEach(function(currentValue) {
             currentValue.addEventListener('mouseenter', function() {
-              currentValue.classList.add('shadow');
+              currentValue.classList.add('shadow', 'border-0');
             });
             currentValue.addEventListener('mouseleave', function() {
-              currentValue.classList.remove('shadow');
+              currentValue.classList.remove('shadow', 'border-0');
             });
           });
         });
