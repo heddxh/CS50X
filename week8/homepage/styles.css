@@ -11,3 +11,10 @@
 {
     display: inline;
 }
+
+#coffee
+{
+    background: linear-gradient(to right, red, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+}
