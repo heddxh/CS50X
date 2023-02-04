@@ -2,3 +2,7 @@
 {
     text-align: center;
 }
+
+.border-secondary {
+    --bs-border-opacity: 0.5;
+  }
