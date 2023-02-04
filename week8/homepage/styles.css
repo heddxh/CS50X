@@ -6,3 +6,8 @@
 .border-secondary {
     --bs-border-opacity: 0.5;
   }
+
+.inlined
+{
+    display: inline;
+}
