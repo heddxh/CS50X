@@ -17,5 +17,6 @@
     background: linear-gradient(to right, red, blue);
     background-clip: text;
     color: transparent;
-    padding: .25rem !important;
+    padding-left: .25rem;
+    padding-right: .25rem;
 }
