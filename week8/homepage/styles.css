@@ -32,3 +32,8 @@
 {
     filter: blur(10px);
 }
+
+body
+{
+    background-image: url("coffeeMachine.webp");
+}
