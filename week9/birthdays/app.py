@@ -29,7 +29,7 @@ def index():
         # TODO: Add the user's entry into the database
         name = request.form.get("name")
         date = request.form.get("date")
-        db.execute("INSERT INTO birthdays (?, ?), name, date")
+        db.execute("INSERT INTO birthdays (?, ?)", name, date)
         return redirect("/")
 
     else:
