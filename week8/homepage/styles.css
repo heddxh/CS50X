@@ -36,6 +36,7 @@
 .blurred-background
 {
     background-image: url(coffeeMachine.webp);
-    filter: blur(5px);
+    filter: blur(15px);
+    height: 1000px;
     background-size: cover;
 }
