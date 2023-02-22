@@ -41,6 +41,7 @@ def index():
         birthdays = []
         for item in data:
             birthday = {}
+            birthday["id"] = item["id"]
             birthday["name"] = item["name"]
             birthday["date"] = str(item["month"]) + "月" + str(item["day"]) + "日"
             birthdays.append(birthday)
