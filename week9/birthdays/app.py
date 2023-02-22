@@ -34,6 +34,7 @@ def index():
             day = date[8:]
             db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", name, month, day)
             return redirect("/")
+
         # Delete from the database
         elif request.form.get("id"):
             id = request.form.get("id")
