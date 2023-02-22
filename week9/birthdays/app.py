@@ -26,15 +26,19 @@ def after_request(response):
 def index():
     if request.method == "POST":
 
-        # TODO: Add the user's entry into the database
-        if request.form
-        name = request.form.get("name")
-        date = request.form.get("date")
-        month = date[5:7]
-        day = date[8:]
-        db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", name, month, day)
-        return redirect("/")
-
+        # Add the user's entry into the database
+        if request.form.get("name") and request.form.get("date"):
+            name = request.form.get("name")
+            date = request.form.get("date")
+            month = date[5:7]
+            day = date[8:]
+            db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", name, month, day)
+            return redirect("/")
+        # Delete from the database
+        elif request.form.get("id"):
+            id = request.form.get("id")
+            db.execute("DELETE FROM birthdays WHERE id = ?", id)
+            return redirect("/")
     else:
 
         # Display the entries in the database on index.html
