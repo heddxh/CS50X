@@ -40,7 +40,8 @@
                                 <td>{{ birthday["date"] }}</td>
                                 <td>
                                     <form method="post">
-                                        <button type="submit" value="{{ birthday["id"] }}">删除</button>
+                                        <input name="id" type="hidden" value="{{ birthday["id"] }}>
+                                        <button type="submit"">删除</button>
                                     </form>
                                 </td>
                             </tr>
