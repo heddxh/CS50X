@@ -123,7 +123,11 @@ def register():
         # Ensure username is not empty
         if not request.form.get("username"):
             return apology("must provide username", 403)
-            
+
+        # Ensure username do not exist
+        username = request.form.get("username")
+        db.execute("SELECT )
+
     return apology("TODO")
 
 
