@@ -114,6 +114,16 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+
+    # Forget any user_id
+    session.clear()
+
+    if request.method == "POST":
+
+        # Ensure username is not empty
+        if not request.form.get("username"):
+            return apology("must provide username", 403)
+            
     return apology("TODO")
 
 
