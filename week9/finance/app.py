@@ -120,7 +120,7 @@ def quote():
             if responce == None:
                 return apology(symbol + "do not exist or something went wrong", 404)
             else:
-                
+                return render_template("quoted.html", responce=responce)
 
 
 @app.route("/register", methods=["GET", "POST"])
