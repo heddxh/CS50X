@@ -126,7 +126,10 @@ def register():
 
         # Ensure username do not exist
         username = request.form.get("username")
-        db.execute("SELECT )
+        if db.execute("SELECT * FROM users WHERE username = ?", username):
+            return apology("username already exists", 403)
+
+        
 
     return apology("TODO")
 
