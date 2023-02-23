@@ -118,7 +118,7 @@ def quote():
             reponse = lookup(symbol)
 
             if responce == None:
-                return apology(symbol + "do not exist", 404)
+                return apology(symbol + "do not exist or something went wrong", 404)
             else:
                 
 
