@@ -109,7 +109,8 @@ def logout():
 def quote():
     """Get stock quote."""
 
-    
+    if request.method == "POST":
+        
 
 
 @app.route("/register", methods=["GET", "POST"])
