@@ -142,7 +142,8 @@ def register():
             return apology("the second input of password is not the same with the first", 403)
 
         # Insert into the database
-        hash = 
+        hash = generate_password_hash(password)
+        db.execute("INSERT INTO users (id, username, hash, cash) VALUES ())
 
     return apology("TODO")
 
