@@ -115,13 +115,15 @@ def quote():
             return apology("please provide stock symbol", 403)
         else:
             symbol = request.form.get("symbol")
-            reponse = lookup(symbol)
+            responce = lookup(symbol)
 
             if responce == None:
                 return apology(symbol + "do not exist or something went wrong", 404)
             else:
                 return render_template("quoted.html", responce=responce)
 
+    else:
+        return render_template("quote.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
