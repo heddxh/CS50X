@@ -134,9 +134,15 @@ def register():
             return apology("please provide password",403)
         elif not request.form.get("confirm"):
             return apology("please repeat your password", 403)
+
+        # Ensure confirm is the same with the password
         password = request.form.get("password")
         confirm = request.form.get("confirm")
-        if notpassword
+        if password != confirm:
+            return apology("the second input of password is not the same with the first", 403)
+
+        # Insert into the database
+        hash = 
 
     return apology("TODO")
 
