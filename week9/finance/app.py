@@ -143,9 +143,12 @@ def register():
 
         # Insert into the database
         hash = generate_password_hash(password)
-        db.execute("INSERT INTO users (id, username, hash, cash) VALUES (?, ?, ? ))
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
-    return apology("TODO")
+        return redirect("/")
+
+    else:
+        return render_template("register.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
