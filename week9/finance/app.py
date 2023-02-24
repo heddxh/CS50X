@@ -120,7 +120,10 @@ def quote():
             if responce == None:
                 return apology(symbol + "do not exist or something went wrong", 404)
             else:
-                return render_template("quoted.html", responce=responce)
+                name = responce["name"]
+                price = usd(responce["price"])
+                symbol = responce["symbol"]
+                return render_template("quoted.html", name=name, price = price, symbol=symbol)
 
     else:
         return render_template("quote.html")
