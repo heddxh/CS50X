@@ -104,7 +104,7 @@ def logout():
     return redirect("/")
 
 
-@app.route("/quote", methods=["GET", "POST"])
+@app.route("/quote", methods=["GET"])
 @login_required
 def quote():
     """Get stock quote."""
@@ -112,16 +112,16 @@ def quote():
     if request.method == "GET":
         return render_template("quote.html")
 
-@app.route("/quote-data", methods=["POST"])
+@app.route("/quote-data", methods=["GET"])
 @login_required
 def quote_data():
 
-    if request.method == "POST":
+    if request.method == "GET":
 
-        if not request.form.get("symbol"):
+        if not request.args.get("symbol"):
             return apology("please provide stock symbol", 403)
         else:
-            symbol = request.form.get("symbol")
+            symbol = request.args.get("symbol")
             responce = lookup(symbol)
 
             if responce == None:
