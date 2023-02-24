@@ -15,15 +15,6 @@
     <h1 id="quoteName"></h1>
     <h2 id="quotePrice"></h2>
     <script>
-        async function getText(file, location) {
-            let myObject = await fetch(file);
-            let myText = await myObject.text();
-            document.getElementById(location).innerHTML = myText;
-        };
-        document.getElementById("lookup").addEventListener("click", function() {
-            getText("/quote-data", "quoteName");
-            getText("/quote-data", "quotePrice");
-        });
-
+        
     </script>
 {% endblock %}
