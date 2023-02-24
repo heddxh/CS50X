@@ -124,7 +124,7 @@ def quote():
                 price = usd(responce["price"])
                 symbol = responce["symbol"]
                 # return render_template("quote.html", name=name, price = price, symbol=symbol)
-                return
+                return 0
 
     else:
         return render_template("quote.html")
