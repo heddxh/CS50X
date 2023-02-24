@@ -14,4 +14,10 @@
     <br>
     <h1 id="quoteName"></h1>
     <h2 id="quotePrice"></h2>
+    <script>
+        document.getElementById("lookup").addEventListener("click", function() {
+            document.getElementById("quoteName").innerHTML = "{{ name }}({{ symbol  }})";
+            document.getElementById("quotePrice").innerHTML = "{{ price }}";
+        });
+    </script>
 {% endblock %}
