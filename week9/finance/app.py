@@ -109,23 +109,7 @@ def logout():
 def quote():
     """Get stock quote."""
 
-    if request.method == "POST":
-
-        if not request.form.get("symbol"):
-            return apology("please provide stock symbol", 403)
-        else:
-            symbol = request.form.get("symbol")
-            responce = lookup(symbol)
-
-            if responce == None:
-                return apology(symbol + "do not exist or something went wrong", 404)
-            else:
-                # name = responce["name"]
-                # price = usd(responce["price"])
-                # symbol = responce["symbol"]
-                # return render_template("quote.html", name=name, price = price, symbol=symbol)
-                return responce
-    else:
+    if request.method == "GET":
         return render_template("quote.html")
 
 @app.route("/quote-data", methods=["POST"])
