@@ -20,13 +20,5 @@
             document.getElementById("quotePrice").innerHTML = "{{ price }}";
         });
 
-        function updateData() {
-        $.ajax({
-            url: '/data',
-            success: function(data) {
-                $('#content').html(data['key1'] + ' ' + data['key2']);
-            }
-        });
-        }
     </script>
 {% endblock %}
