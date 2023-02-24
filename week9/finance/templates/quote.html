@@ -15,6 +15,18 @@
     <h1 id="quoteName"></h1>
     <h2 id="quotePrice"></h2>
     <script>
-        
+        name = document.getElementById("quoteName");
+        price = document.getElementById("quotePrice");
+        button = document.getElementById("lookup")
+        $(function() {
+            $button.bind('click', function() {
+                $.getJSON('/_quote_data', {
+                    a: $('input[name="a"]').val(),
+                }, function(data) {
+                    $("#result").text(data.result);
+                });
+            return false;
+            });
+        });
     </script>
 {% endblock %}
