@@ -112,11 +112,11 @@ def quote():
     if request.method == "GET":
         return render_template("quote.html")
 
-@app.route("/quote-data", methods=["GET"])
+@app.route("/_quote_data", methods=["GET"])
 @login_required
 def quote_data():
 
-    
+
 #    if request.method == "GET":
 #
 #        if not request.args.get("symbol"):
