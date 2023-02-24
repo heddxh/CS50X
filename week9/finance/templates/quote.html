@@ -15,15 +15,15 @@
     <h1 id="quoteName"></h1>
     <h2 id="quotePrice"></h2>
     <script>
-        document.getElementById("lookup").addEventListener("click", function() {
-            document.getElementById("quoteName").innerHTML = "{{ name }}({{ symbol }})";
-            document.getElementById("quotePrice").innerHTML = "{{ price }}";
-        });
-
-        async function getText(file) {
+        async function getText(file, location) {
             let myObject = await fetch(file);
             let myText = await myObject.text();
-            myDisplay(myText);
+            document.getElementById(location).innerHTML = myText;
         };
+        document.getElementById("lookup").addEventListener("click", function() {
+            getText("/quote-data", "quoteName");
+            getText("/quote-data", "quotePrice");
+        });
+
     </script>
 {% endblock %}
