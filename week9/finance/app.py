@@ -112,27 +112,28 @@ def quote():
     if request.method == "GET":
         return render_template("quote.html")
 
+
 @app.route("/_quote_data", methods=["GET"])
 @login_required
 def _quote_data():
 
+    if request.method == "GET":
 
-#    if request.method == "GET":
-#
-#        if not request.args.get("symbol"):
-#            return apology("please provide stock symbol", 403)
-#        else:
-#            symbol = request.args.get("symbol")
-#            responce = lookup(symbol)
-#
-#            if responce == None:
-#                return apology(symbol + "do not exist or something went wrong", 404)
-#            else:
-#                name = responce["name"]
-#                price = usd(responce["price"])
-#                symbol = responce["symbol"]
-#                return render_template("quote.html", name=name, price = price, symbol=symbol)
-#                return responce
+        if not request.args.get("symbol"):
+            return apology("please provide stock symbol", 403)
+        else:
+            symbol = request.args.get("symbol")
+            responce = lookup(symbol)
+
+            if responce == None:
+                return apology(symbol + "do not exist or something went wrong", 404)
+            else:
+                # name = responce["name"]
+                # price = usd(responce["price"])
+                # symbol = responce["symbol"]
+                # return render_template("quote.html", name=name, price = price, symbol=symbol)
+                return responce
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
