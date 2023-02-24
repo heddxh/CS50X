@@ -40,7 +40,8 @@ def lookup(symbol):
 
     # Contact API
     try:
-        api_key = os.environ.get("API_KEY")
+        # api_key = os.environ.get("API_KEY")
+        api_key = "pk_7d5fd4339f7849dab5c1c60269e6c09a"
         url = f"https://cloud.iexapis.com/stable/stock/{urllib.parse.quote_plus(symbol)}/quote?token={api_key}"
         response = requests.get(url)
         response.raise_for_status()
