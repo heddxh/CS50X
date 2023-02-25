@@ -18,6 +18,8 @@
         let name = document.getElementById("quoteName");
         let price = document.getElementById("quotePrice");
         let button = document.getElementById("lookup")
+
+        // jQuery
         $(function() {
             $(button).on('click', function() {
                 $.getJSON('/_quote_data', {
@@ -29,5 +31,8 @@
             return false;
             });
         });
+
+        // Fetch API
+        
     </script>
 {% endblock %}
