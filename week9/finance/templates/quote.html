@@ -23,7 +23,7 @@
                 $.getJSON('/_quote_data', {
                     symbol: $('input[name="symbol"]').val(),
                 }, function(data) {
-                    $("#result").text(data.result);
+                    $("#quoteName").text(data.result.);
                 });
             return false;
             });
