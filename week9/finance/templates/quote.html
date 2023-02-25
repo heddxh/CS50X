@@ -34,8 +34,7 @@
         });
 
         // Fetch API & Arrow Function
-        let fetchRequest = input.value;
-        let fetchPromice = fetch("/_quote_data")
+        let fetchPromice = fetch("/_quote_data?" + input.value)
 
     </script>
 {% endblock %}
