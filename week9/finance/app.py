@@ -129,10 +129,7 @@ def quote_data():
             if responce == None:
                 return apology(symbol + "do not exist or something went wrong", 404)
             else:
-                # name = responce["name"]
-                # price = usd(responce["price"])
-                # symbol = responce["symbol"]
-                # return render_template("quote.html", name=name, price = price, symbol=symbol)
+                responce["price"] = usd(responce["price"])
                 return responce
 
 
