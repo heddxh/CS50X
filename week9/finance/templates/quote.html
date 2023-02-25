@@ -19,7 +19,7 @@
         price = document.getElementById("quotePrice");
         button = document.getElementById("lookup")
         $(function() {
-            $button.bind('click', function() {
+            $(button).bind('click', function() {
                 $.getJSON('/_quote_data', {
                     symbol: $('input[name="symbol"]').val(),
                 }, function(data) {
