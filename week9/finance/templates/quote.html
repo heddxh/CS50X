@@ -23,8 +23,8 @@
                 $.getJSON('/_quote_data', {
                     symbol: $('input[name="symbol"]').val(),
                 }, function(data) {
-                    $("#quoteName").text(data.result.name);
-                    $("#quotePrice").text(data.result.price);
+                    $("#quoteName").text(data.name);
+                    $("#quotePrice").text(data.price);
                 });
             return false;
             });
