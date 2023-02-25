@@ -38,10 +38,10 @@
         // Fetch API & Arrow Function
         button.addEventListener("click", (ev) => {
             ev.preventDefault();
-            let fetchPromice = fetch("/_quote_data?" + input.value)
+            let fetchPromice = fetch("/_quote_data?symbol=" + input.value)
             fetchPromice
                 .then( responce => {
-                    return responce,json();
+                    return responce.json();
                 })
                 .then( json => {
                     price.innerHTML = json.price
