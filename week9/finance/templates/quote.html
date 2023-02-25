@@ -17,7 +17,8 @@
     <script>
         let name = document.getElementById("quoteName");
         let price = document.getElementById("quotePrice");
-        let button = document.getElementById("lookup")
+        let button = document.getElementById("lookup");
+        let input = document.getElementById("symbol");
 
         // jQuery
         $(function() {
@@ -33,8 +34,8 @@
         });
 
         // Fetch API & Arrow Function
-        let fetchRequest = 
-        let fetchPromice = fetch("/_quote_data)
+        let fetchRequest = input.value;
+        let fetchPromice = fetch("/_quote_data")
 
     </script>
 {% endblock %}
