@@ -34,7 +34,13 @@
         });
 
         // Fetch API & Arrow Function
-        let fetchPromice = fetch("/_quote_data?" + input.value)
+
+        button.addEventListener("click", symbol => {
+            let fetchPromice = fetch("/_quote_data?" + input.value)
+            fetchPromice.then( responce => {
+
+            })
+        });
 
     </script>
 {% endblock %}
