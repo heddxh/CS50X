@@ -21,7 +21,7 @@
         $(function() {
             $button.bind('click', function() {
                 $.getJSON('/_quote_data', {
-                    a: $('input[name="a"]').val(),
+                    symbol: $('input[name="symbol"]').val(),
                 }, function(data) {
                     $("#result").text(data.result);
                 });
