@@ -24,7 +24,7 @@ db = SQL("sqlite:///finance.db")
 
 # Make sure API key is set
 # if not os.environ.get("API_KEY"):
-    # raise RuntimeError("API_KEY not set")
+# raise RuntimeError("API_KEY not set")
 
 
 @app.after_request
@@ -76,7 +76,8 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute("SELECT * FROM users WHERE username = ?",
+                          request.form.get("username"))
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
@@ -155,7 +156,7 @@ def register():
 
         # Ensure password is not empty
         if not request.form.get("password"):
-            return apology("please provide password",403)
+            return apology("please provide password", 403)
         elif not request.form.get("confirm"):
             return apology("please repeat your password", 403)
 
@@ -167,7 +168,8 @@ def register():
 
         # Insert into the database
         hash = generate_password_hash(password)
-        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+        db.execute(
+            "INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
         return redirect("/")
 
