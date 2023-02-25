@@ -21,6 +21,7 @@
         let input = document.getElementById("symbol");
 
         // jQuery
+        /*
         $(function() {
             $(button).on('click', function() {
                 $.getJSON('/_quote_data', {
@@ -32,14 +33,18 @@
             return false;
             });
         });
+        */
 
         // Fetch API & Arrow Function
-
-        button.addEventListener("click", symbol => {
+        button.addEventListener("click", () => {
             let fetchPromice = fetch("/_quote_data?" + input.value)
-            fetchPromice.then( responce => {
-
-            })
+            fetchPromice
+                .then( responce => {
+                    return responce,json();
+                })
+                .then( json => {
+                    price.innerHTML = json.price
+                });
         });
 
     </script>
