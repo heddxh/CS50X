@@ -116,7 +116,7 @@ def quote():
 
 @app.route("/_quote_data", methods=["GET"])
 @login_required
-def _quote_data():
+def quote_data():
 
     if request.method == "GET":
 
