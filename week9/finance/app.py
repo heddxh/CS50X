@@ -131,7 +131,7 @@ def quote_data():
             return apology("please provide stock symbol", 403)
         else:
             symbol = request.args.get("symbol")
-            responce = lookup(symbol)
+            responce = lookup(symbol) # API
 
             if responce == None:
                 return apology(symbol + "do not exist or something went wrong", 404)
