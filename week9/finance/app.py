@@ -47,7 +47,12 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+
+    if request-method == "POST":
+
+        # Ensure input not empty
+        if not request.form.get("buy"):
+            
 
 
 @app.route("/history")
