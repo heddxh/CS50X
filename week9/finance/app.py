@@ -52,7 +52,9 @@ def buy():
 
         # Ensure input not empty
         if not request.form.get("buy"):
-            
+            return apology("please provide stock symbol", 403)
+
+
 
 
 @app.route("/history")
