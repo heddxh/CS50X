@@ -12,7 +12,7 @@
     <button class="btn btn-primary" type="submit" id="lookup">Look Up</button>
     </form>
     <br>
-    <div class="spinner-grow" role="status" id="load" style="visibility: hidden">
+    <div class="spinner-grow" role="status" id="load" style="visibility:hidden;">
         <span class="visually-hidden">Loading...</span>
     </div>
     <h1 id="quoteName"></h1>
@@ -43,6 +43,7 @@
         // Fetch API & Arrow Function
         button.addEventListener("click", (ev) => {
             ev.preventDefault();
+            load.style.visibility = "visible";
             let fetchPromice = fetch("/_quote_data?symbol=" + input.value)
             fetchPromice
                 .then( responce => {
