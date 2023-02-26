@@ -48,7 +48,7 @@ def index():
 def buy():
     """Buy shares of stock"""
 
-    if request-method == "POST":
+    if request.method == "POST":
 
         # Ensure input not empty
         if not request.form.get("buy"):
