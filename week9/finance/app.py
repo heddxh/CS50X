@@ -134,7 +134,7 @@ def quote_data():
             responce = lookup(symbol) # API
 
             if responce == None:
-                return apology(symbol + "do not exist or something went wrong", 302)
+                return apology(symbol + "do not exist or something went wrong", 403)
             else:
                 responce["price"] = usd(responce["price"])
                 return responce
