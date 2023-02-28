@@ -48,7 +48,7 @@
             load.style.visibility = "visible";
             let fetchPromice = fetch("/_quote_data?symbol=" + input.value)
             fetchPromice
-                .then( response => {
+                /*.then( response => {
                     if(response.status == "403")
                     {
                         window.location = response.url;
@@ -62,7 +62,8 @@
                     load.style.visibility = "hidden";
                     name.innerHTML = json.name + "(" + json.symbol + ")";
                     price.innerHTML = json.price;
-                });
+                });*/
+                .then( )
         })
 
     </script>
