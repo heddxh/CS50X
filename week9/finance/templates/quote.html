@@ -49,7 +49,7 @@
             let fetchPromice = fetch("/_quote_data?symbol=" + input.value)
             fetchPromice
                 .then( response => {
-                    if(response.redirected)
+                    if(response.status == "403")
                     {
                         console.log("redirect");
                         window.location = response.url;
