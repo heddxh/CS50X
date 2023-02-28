@@ -48,16 +48,14 @@
             load.style.visibility = "visible";
             let fetchPromice = fetch("/_quote_data?symbol=" + input.value)
             fetchPromice
-                .then( responce => {
+                .then( response => {
                     if(response.redirected)
                     {
-                        console.log("redirect");
                         window.location = response.url;
                     }
                     else
                     {
-                        console.log("json");
-                        return responce.json();
+                        return response.json();
                     }
                 })
                 .then( json => {
