@@ -48,16 +48,15 @@
             load.style.visibility = "visible";
             let fetchPromice = fetch("/_quote_data?symbol=" + input.value)
             fetchPromice
-                .then(
+                .then( responce => {
                     if(response.redirected)
                     {
-                        window.location = response.url
-                    })
+                        window.location = response.url;
+                    }
                     else
                     {
-                .then( responce => {
-                    return responce.json();
-                })
+                        return responce.json();
+                    }})
                 .then( json => {
                     load.style.visibility = "hidden";
                     name.innerHTML = json.name + "(" + json.symbol + ")";
