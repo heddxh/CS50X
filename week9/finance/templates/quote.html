@@ -64,7 +64,12 @@
                     price.innerHTML = json.price;
                 });*/
                 .then( response => {return response.json()},
-                    response => {window.location = response.url;throw new Error('Uh-oh!');})
+                    response => {window.location = response.url})
+                .then( json => {
+                    load.style.visibility = "hidden";
+                    name.innerHTML = json.name + "(" + json.symbol + ")";
+                    price.innerHTML = json.price;
+                })
         })
 
     </script>
