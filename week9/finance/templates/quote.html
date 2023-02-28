@@ -51,10 +51,12 @@
                 .then( response => {
                     if(response.redirected)
                     {
+                        console.log("redirect");
                         window.location = response.url;
                     }
                     else
                     {
+                        console.log("json");
                         return response.json();
                     }
                 })
