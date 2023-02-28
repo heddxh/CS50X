@@ -51,6 +51,7 @@
                 .then( responce => {
                     if(response.redirected)
                     {
+                        console.log("redirect");
                         window.location = response.url;
                     }
                     else
