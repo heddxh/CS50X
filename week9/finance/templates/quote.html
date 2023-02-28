@@ -51,12 +51,10 @@
                 .then( response => {
                     if(response.status == "403")
                     {
-                        console.log("redirect");
                         window.location = response.url;
                     }
                     else
                     {
-                        console.log(response);
                         return response.json();
                     }
                 })
