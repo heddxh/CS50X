@@ -63,7 +63,8 @@
                     name.innerHTML = json.name + "(" + json.symbol + ")";
                     price.innerHTML = json.price;
                 });*/
-                .then( )
+                .then( response => {return response.json()},
+                    response => {window.location = response.url})
         })
 
     </script>
