@@ -56,14 +56,14 @@
                     else
                     {
                         return responce.json();
-                    }})
+                    }
+                })
                 .then( json => {
                     load.style.visibility = "hidden";
                     name.innerHTML = json.name + "(" + json.symbol + ")";
                     price.innerHTML = json.price;
                 });
-                    }
-        });
+        }
 
     </script>
 {% endblock %}
