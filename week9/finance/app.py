@@ -57,11 +57,12 @@ def buy():
         symbol = request.form.get("symbol")
         response =lookup(symbol)
 
-        # Ensure input is valid(exist)
+        # Ensure stock symbol is valid(exist)
         if response == None:
             return apology(symbol + "do not exist or something went wrong", 403)
 
-        
+        # Ensure number is valid
+        if 
 
 
 
