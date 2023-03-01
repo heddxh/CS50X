@@ -60,7 +60,7 @@ def buy():
 
         # Ensure stock symbol is valid(exist)
         if response == None:
-            return apology(symbol + "do not exist or something went wrong", 403)
+            return apology(symbol + " do not exist or something went wrong", 403)
 
         # Ensure number is valid
         if not isinstance(number, int):
@@ -151,7 +151,7 @@ def quote_data():
             responce = lookup(symbol) # API
 
             if responce == None:
-                return apology(symbol + "do not exist or something went wrong", 403)
+                return apology(symbol + " do not exist or something went wrong", 403)
             else:
                 responce["price"] = usd(responce["price"])
                 return responce
