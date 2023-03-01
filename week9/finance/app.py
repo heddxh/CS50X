@@ -51,10 +51,11 @@ def buy():
     if request.method == "POST":
 
         # Ensure input not empty
-        if not request.form.get("symbol"):
-            return apology("please provide stock symbol", 403)
+        if not request.form.get("symbol") or not request.form.get("shares"):
+            return apology("please provide stock symbol and its number", 403)
 
         symbol = request.form.get("symbol")
+        number = request.form.get("shares")
         response =lookup(symbol)
 
         # Ensure stock symbol is valid(exist)
@@ -62,7 +63,7 @@ def buy():
             return apology(symbol + "do not exist or something went wrong", 403)
 
         # Ensure number is valid
-        if 
+        if type(number) = 
 
 
 
