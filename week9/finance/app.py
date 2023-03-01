@@ -73,10 +73,12 @@ def buy():
         user_cash = db.execute("SELECT cash FROM users WHERE username = ?", user_id)
         if user_cash < price:
             return apology("POOR GUY!", 403)
+        else:
+            left_cash = user_cash - price
 
         # Update buy table
         db.execute("INSERT INTO buy (user_id,stock,price,shares) VALUES (?,?,?,?)", user_id, symbol, price, number)
-        db.execute("UPDATE users SET ")
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", left_cash, user_id)
         return redirect("/")
 
     elif request.method == "GET":
