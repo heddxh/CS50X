@@ -54,6 +54,15 @@ def buy():
         if not request.form.get("buy"):
             return apology("please provide stock symbol", 403)
 
+        symbol = request.form.get("buy")
+        response =lookup(symbol)
+
+        # Ensure input is valid(exist)
+        if response == None:
+            return apology(symbol + "do not exist or something went wrong", 403)
+
+        
+
 
 
 
