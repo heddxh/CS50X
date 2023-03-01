@@ -66,7 +66,10 @@ def buy():
         if not isinstance(number, int):
             return apology("please provide an int as shares you want to buy", 403)
 
-        
+        return redirect("index.html")
+
+    elif request.method == "GET":
+        return render_template
 
 
 
