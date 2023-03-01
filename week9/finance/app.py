@@ -75,7 +75,7 @@ def buy():
             return apology("POOR GUY!", 403)
 
         # Update buy table
-        db.execute("INSERT INTO buy")
+        db.execute("INSERT INTO buy ()")
 
         return redirect("/")
 
