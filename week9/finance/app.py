@@ -55,7 +55,7 @@ def buy():
             return apology("please provide stock symbol and its number", 403)
 
         symbol = request.form.get("symbol")
-        number = request.form.get("shares")
+        number = int(request.form.get("shares"))
         response =lookup(symbol)
 
         # Ensure stock symbol is valid(exist)
@@ -63,8 +63,9 @@ def buy():
             return apology(symbol + " do not exist or something went wrong", 403)
 
         # Ensure number is valid
-        if not isinstance(number, int):
-            return apology("please provide an int as shares you want to buy", 403)
+        # 交给 HTML 元素确保输入为整数
+        if number <= 0:
+            return apology("please provide a positive int ", 403)
 
         return redirect("/")
 
