@@ -55,12 +55,13 @@
                     }
                     else
                     {
-                        return response.json();
-                        .then( json => {
-                        load.style.visibility = "hidden";
-                        name.innerHTML = json.name + "(" + json.symbol + ")";
-                        price.innerHTML = json.price;
-                });
+                        let json = response.json();
+                        json
+                            .then( json => {
+                                load.style.visibility = "hidden";
+                                name.innerHTML = json.name + "(" + json.symbol + ")";
+                                price.innerHTML = json.price;
+                            })
                     }
                 })
         })
