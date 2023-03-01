@@ -63,7 +63,10 @@ def buy():
             return apology(symbol + "do not exist or something went wrong", 403)
 
         # Ensure number is valid
-        if type(number) = 
+        if not isinstance(number, int):
+            return apology("please provide an int as shares you want to buy", 403)
+
+        
 
 
 
