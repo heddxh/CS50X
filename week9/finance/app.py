@@ -69,8 +69,8 @@ def buy():
 
         # Check user's cash
         price = response["price"]
-        username = 
-        user_cash = db.execute("SELECT cash FROM users WHERE username = ")
+        user_id = session["user_id"]
+        user_cash = db.execute("SELECT cash FROM users WHERE username = ?", user_id)
 
         return redirect("/")
 
