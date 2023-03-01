@@ -67,6 +67,9 @@ def buy():
         if number <= 0:
             return apology("please provide a positive integer", 403)
 
+        # Check user's cash
+        
+
         return redirect("/")
 
     elif request.method == "GET":
