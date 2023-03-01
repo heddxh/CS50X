@@ -70,7 +70,7 @@ def buy():
         # Check user's cash
         price = response["price"]
         user_id = session["user_id"]
-        user_cash = db.execute("SELECT cash FROM users WHERE username = ?", user_id)
+        user_cash = db.execute("SELECT cash FROM users WHERE username = ?", user_id)[0]["cash"]
         if user_cash < price:
             return apology("POOR GUY!", 403)
         else:
