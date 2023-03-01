@@ -76,7 +76,7 @@ def buy():
 
         # Update buy table
         db.execute("INSERT INTO buy (user_id,stock,price,shares) VALUES (?,?,?,?)", user_id, symbol, price, number)
-        db.execute("")
+        db.execute("UPDATE users SET ")
         return redirect("/")
 
     elif request.method == "GET":
