@@ -65,7 +65,7 @@ def buy():
         # Ensure number is valid
         # 交给 HTML 元素确保输入为整数
         if number <= 0:
-            return apology("please provide a positive int ", 403)
+            return apology("please provide a positive integer", 403)
 
         return redirect("/")
 
