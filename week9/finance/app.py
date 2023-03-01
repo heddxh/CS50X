@@ -71,6 +71,8 @@ def buy():
         price = response["price"]
         user_id = session["user_id"]
         user_cash = db.execute("SELECT cash FROM users WHERE username = ?", user_id)
+        if user_cash < price:
+            return
 
         return redirect("/")
 
