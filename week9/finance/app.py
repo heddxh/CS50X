@@ -72,7 +72,10 @@ def buy():
         user_id = session["user_id"]
         user_cash = db.execute("SELECT cash FROM users WHERE username = ?", user_id)
         if user_cash < price:
-            return
+            return apology("POOR GUY!", 403)
+
+        # Update buy table
+        
 
         return redirect("/")
 
