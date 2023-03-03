@@ -21,4 +21,6 @@ int a, b, c, big, small;
 //big = max(a,b,c);
 //small = min(a,b,c);
 if ((small >= 2) && (big >=2))
-{int c}
+{
+    
+}
