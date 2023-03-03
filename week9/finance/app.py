@@ -74,7 +74,7 @@ def buy():
         if user_cash < price:
             return apology("POOR GUY!", 403)
         else:
-            left_cash = user_cash - price
+            left_cash = user_cash - price * number
 
         # Update buy table
         db.execute("INSERT INTO buy (user_id,stock,price,shares) VALUES (?,?,?,?)", user_id, symbol, price, number)
