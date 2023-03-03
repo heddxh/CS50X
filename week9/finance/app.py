@@ -68,16 +68,17 @@ def buy():
             return apology("please provide a positive integer", 403)
 
         # Check user's cash
-        price = response["price"]
+        price_per = response["price"]
         user_id = session["user_id"]
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+        price = price_per * number
         if user_cash < price:
             return apology("POOR GUY!", 403)
         else:
-            left_cash = user_cash - price * number
+            left_cash = user_cash - price
 
         # Update buy table
-        db.execute("INSERT INTO buy (user_id,stock,price,shares) VALUES (?,?,?,?)", user_id, symbol, price, number)
+        db.execute("INSERT INTO buy (user_id,stock,price,shares) VALUES (?,?,?,?)", user_id, symbol, price_per, number)
         db.execute("UPDATE users SET cash = ? WHERE id = ?", left_cash, user_id)
         return redirect("/")
 
