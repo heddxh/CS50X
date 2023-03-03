@@ -12,9 +12,5 @@ int is_zhishu(int number)
         {
             return 1;
         }
-        else
-        {
-            number = result1;
-        }
     }
 }
