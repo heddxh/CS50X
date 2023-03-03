@@ -15,3 +15,8 @@ int is_zhishu(int number)
     }
     return 0;
 }
+
+int a, b, c, big, small;
+// 输入a ，b
+big = max(a,b);
+small = 
