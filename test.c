@@ -18,5 +18,10 @@ int is_zhishu(int number)
 
 int a, b, c, big, small;
 // 输入a ，b
-big = max(a,b);
-small = 
+//big = max(a,b,c);
+//small = min(a,b,c);
+if ((small >= 2) && (big >=2))
+{
+    int i;
+    for()
+}
