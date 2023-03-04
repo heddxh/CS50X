@@ -26,18 +26,15 @@
                 </tr>
             {% endfor %}
         </tbody>
-    </table>
-
-    <table class="table">
-        <tr>
-            <td colspan="3"></td>
-            <th scope="raw">Cash Left</th>
-            <td >{{ cash_left | usd }}</td>
-        </tr>
-        <tr>
-            <td colspan="3"></td>
-            <th scope="raw">Total</th>
-            <td>{{ total | usd }}</td>
-        </tr>
+        <tfoot>
+            <tr>
+                <th scope="raw" colsapn="4" class="text-end">Cash Left</th>
+                <td >{{ cash_left | usd }}</td>
+            </tr>
+            <tr>
+                <th scope="raw" colsapn="4" class="text-end">Total</th>
+                <td>{{ total | usd }}</td>
+            </tr>
+        </tfoot>
     </table>
 {% endblock %}
