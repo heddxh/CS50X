@@ -238,14 +238,15 @@ def register():
 def sell():
     """Sell shares of stock"""
 
+    user_id = session["user_id"]
+
     if request.method == "POST":
 
-        if not request.form.get["symbol"]:
+        if not request.form.get("symbol"):
             return apology("please provide a valid stock symbol you owned", 403)
 
-        user_id = session["user_id"]
-        symbol = request.form.get["symbol"]
-        shares_sell = int(request.form.get["number"])
+        symbol = request.form.get("symbol")
+        shares_sell = int(request.form.get("shares"))
 
         shares_own = db.execute("SELECT SUM(shares) FROM buy WHERE user_id=? AND stock=?", user_id, symbol)[0]["SUM(shares)"]
 
@@ -265,4 +266,5 @@ def sell():
     elif request.method == "GET":
 
         stocks = db.execute("SELECT DISTINCT stock FROM buy WHERE user_id = ?", user_id)
-        return render_template("/sell.html", )
+        # stocks is a list with mutiple dict(stock:?) in it
+        return render_template("/sell.html", stocks=stocks)
