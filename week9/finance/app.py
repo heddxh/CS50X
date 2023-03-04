@@ -243,8 +243,13 @@ def sell():
         if not request.form.get["symbol"]:
             return apology("please provide a valid stock symbol you owned", 403)
 
+        user_id = session["user_id"]
         symbol = request.form.get["symbol"]
         shares_sell = request.form.get["number"]
 
-        shares_own = db.execute("SELECT SUM(shares) FROM buy WHERE user_id=? AND )
-        if
+        shares_own = db.execute("SELECT SUM(shares) FROM buy WHERE user_id=? AND stock=?", user_id, symbol)
+
+        if shares_sell > shares_own:
+            return apology("You don't have that mach shares", 403)
+
+        
