@@ -44,18 +44,24 @@ def index():
     user_id = session["user_id"]
     rows_by_stock = db.execute("SELECT SUM(shares), stock FROM buy WHERE user_id = ? GROUP BY stock", user_id)
     stocks = []
+    total = 0
     for row in rows_by_stock:
         symbol = row["stock"]
         response = lookup(symbol)
         stock = {
-            "symbol": symbol
-            "name": response["name"]
-            "shares": row["SUM(shares)"]
+            "symbol": symbol,
+            "name": response["name"],
+            "shares": row["SUM(shares)"],
             "price": response["price"]
         }
         stocks.append(stock)
 
-    return render_template("index.html", stocks=stocks)
+        total += stock[price]
+
+    cash_left = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+    total = cash_left
+
+    return render_template("index.html", stocks=stocks, cash_left=cash_left, total=cash_left)
 
 
 @app.route("/buy", methods=["GET", "POST"])
