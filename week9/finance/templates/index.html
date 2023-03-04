@@ -26,7 +26,7 @@
         </tbody>
         <tfoot>
             <td>{{ cash_left }}</td>
-            <td>{{ property }}</td>
+            <td>{{ (cash_left + prize * number) | usd }}</td>
         </tfoot>
 
     </table>

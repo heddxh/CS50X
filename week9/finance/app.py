@@ -41,6 +41,8 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
+    user_id = session["user_id"]
+    db.execute("SELECT * FROM buy WHERE user_id = ?", user_id)
     return render_template("index.html")
 
 
