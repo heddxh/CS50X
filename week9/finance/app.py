@@ -56,12 +56,12 @@ def index():
         }
         stocks.append(stock)
 
-        total += stock[price]
+        total += stock["price"] * stock["shares"]
 
     cash_left = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    total = cash_left
+    total += cash_left[]
 
-    return render_template("index.html", stocks=stocks, cash_left=cash_left, total=cash_left)
+    return render_template("index.html", stocks=stocks, cash_left=cash_left, total=total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
