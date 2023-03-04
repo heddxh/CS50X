@@ -7,17 +7,16 @@
 {% block main %}
     <table class="table">
         <tr>
-            <th rowspan={{ }}>{{ user_name }}</td>
-            <td>{{ stock }}</td>
+            <td>{{ symbol }}</td>
             <td>{{ number }}</td>
             <td>{{ prize_per }}</td>
             <td>{{ prize }}</td>
-            <td rowspan="2">{{ cash_left }}</td>
-            <td rowspan="2">{{ property }}</td>
         </tr>
-        <tr>
-            <th>TSLA</th>
-        </tr>
+
+        <tfoot>
+            <td>{{ cash_left }}</td>
+            <td>{{ property }}</td>
+        </tfoot>
 
     </table>
 {% endblock %}
