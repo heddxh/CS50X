@@ -26,9 +26,16 @@
                 </tr>
             {% endfor %}
         </tbody>
-        <tfoot>
-            <td>{{ cash_left }}</td>
+    </table>
+
+    <table class="table">
+        <tr>
+            <th>Cash Left</th>
+            <td>{{ cash_left | usd }}</td>
+        </tr>
+        <tr>
+            <th>Total</th>
             <td>{{ total | usd }}</td>
-        </tfoot>
+        </tr>
     </table>
 {% endblock %}
