@@ -37,4 +37,11 @@
             </tr>
         </tfoot>
     </table>
+    {% if total < 10000 %}
+        <h1>You lose money!</h1>
+    {% elif total = 100000 %}
+        <h1>At least you don't fail, right?</h1>
+    {% else %}
+        <h1>You earn money!</h1>
+    {% endif %}
 {% endblock %}
