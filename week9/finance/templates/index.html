@@ -8,15 +8,21 @@
     <table class="table">
         <thead>
             <tr>
-                <td>symbol</td>
+                <td>Symbol</td>
                 <td>Name</td>
-                <td>Number</td>
+                <td>Shares</td>
                 <td>Price</td>
-                <td>total</td>
+                <td>Total</td>
             </tr>
         </thead>
         <tbody>
-
+            <tr>
+                <td>{{ symbol }}</td>
+                <td>{{ name }}</td>
+                <td>{{ number }}</td>
+                <td>{{ price | usd }}</td>
+                <td>{{ prize * number | usd }}</td>
+            </tr>
         </tbody>
         <tfoot>
             <td>{{ cash_left }}</td>
