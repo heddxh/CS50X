@@ -42,7 +42,7 @@ def index():
     """Show portfolio of stocks"""
 
     user_id = session["user_id"]
-    rows_by_stock = db.execute("SELECT SUM(shares), stock FROM buy WHERE user_id = ? GROUP BY stock", user_id)
+    rows_by_stock = db.execute("SELECT SUM(shares), stock FROM history WHERE user_id = ? GROUP BY stock", user_id)
     stocks = []
     total = 0
     for row in rows_by_stock:
@@ -98,8 +98,8 @@ def buy():
         else:
             left_cash = user_cash - price
 
-        # Update buy table
-        db.execute("INSERT INTO buy (user_id,stock,price,shares) VALUES (?,?,?,?)", user_id, symbol, price_per, number)
+        # Update history table
+        db.execute("INSERT INTO history (user_id,stock,price,shares) VALUES (?,?,?,?)", user_id, symbol, price_per, number)
         db.execute("UPDATE users SET cash = ? WHERE id = ?", left_cash, user_id)
         return redirect("/")
 
@@ -248,15 +248,15 @@ def sell():
         symbol = request.form.get("symbol")
         shares_sell = int(request.form.get("shares"))
 
-        shares_own = db.execute("SELECT SUM(shares) FROM buy WHERE user_id=? AND stock=?", user_id, symbol)[0]["SUM(shares)"]
+        shares_own = db.execute("SELECT SUM(shares) FROM history WHERE user_id=? AND stock=?", user_id, symbol)[0]["SUM(shares)"]
 
         if shares_sell > shares_own:
             return apology("You don't have that mach shares", 403)
 
         price = lookup(symbol)["price"]
 
-        # Insert into sell table
-        db.execute("INSERT INTO sell (user_id,stock,price,shares) VALUES (?,?,?,?)", user_id, symbol, price, shares_sell)
+        # Insert into history table
+        db.execute("INSERT INTO history (user_id,stock,price,shares) VALUES (?,?,?,?)", user_id, symbol, price, -shares_sell)
 
         # Update users table
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", price*shares_sell, user_id)
@@ -265,6 +265,6 @@ def sell():
 
     elif request.method == "GET":
 
-        stocks = db.execute("SELECT DISTINCT stock FROM buy WHERE user_id = ?", user_id)
+        stocks = db.execute("SELECT DISTINCT stock FROM history WHERE user_id = ?", user_id)
         # stocks is a list with mutiple dict(stock:?) in it
         return render_template("/sell.html", stocks=stocks)
