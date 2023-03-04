@@ -246,5 +246,5 @@ def sell():
         symbol = request.form.get["symbol"]
         shares_sell = request.form.get["number"]
 
-        shares_own = db.execute("SELECT )
+        shares_own = db.execute("SELECT SUM(shares) FROM buy WHERE user_id=? AND )
         if
