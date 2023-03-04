@@ -252,4 +252,10 @@ def sell():
         if shares_sell > shares_own:
             return apology("You don't have that mach shares", 403)
 
-        
+        price = lookup(symbol)["price"]
+
+        # Insert into sell table
+        db.execute("INSERT INTO sell (user_id,stock,price,shares) VALUES (?,?,?,?)", user_id, symbol, price, shares_sell)
+
+        # Update users table
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", left_cash, user_id)
