@@ -264,5 +264,5 @@ def sell():
 
     elif request.method == "GET":
 
-        stocks = db.execute("SELECT stock FROM buy WHERE user_id = ?", user_id)
+        stocks = db.execute("SELECT DISTINCT stock FROM buy WHERE user_id = ?", user_id)
         return render_template("/sell.html", )
