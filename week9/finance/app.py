@@ -51,10 +51,11 @@ def index():
             "symbol": symbol
             "name": response["name"]
             "shares": row["SUM(shares)"]
+            "price": response["price"]
         }
         stocks.append(stock)
 
-    return render_template("index.html")
+    return render_template("index.html", stocks=stocks)
 
 
 @app.route("/buy", methods=["GET", "POST"])
