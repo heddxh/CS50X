@@ -16,19 +16,21 @@
             </tr>
         </thead>
         <tbody>
-            {% }
-            <tr>
-                <td>{{ symbol }}</td>
-                <td>{{ name }}</td>
-                <td>{{ shares }}</td>
-                <td>{{ price | usd }}</td>
-                <td>{{ prize * shares | usd }}</td>
-            </tr>
+            {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock.symbol }}</td>
+                    <td>{{ stock.name }}</td>
+                    <td>{{ stock.shares }}</td>
+                    <td>{{ stock.price | usd }}</td>
+                    <td>{% (prize * shares) | usd %}</td>
+                </tr>
+            {% endfor %}
         </tbody>
-        <tfoot>
-            <td>{{ cash_left }}</td>
-            <td>{{ (cash_left + prize * shares) | usd }}</td>
-        </tfoot>
-
+        {#
+            <tfoot>
+                <td>{{ cash_left }}</td>
+                <td>{{ (cash_left + prize * shares) | usd }}</td>
+            </tfoot>
+        #}
     </table>
 {% endblock %}
