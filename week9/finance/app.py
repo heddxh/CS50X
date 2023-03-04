@@ -245,9 +245,9 @@ def sell():
 
         user_id = session["user_id"]
         symbol = request.form.get["symbol"]
-        shares_sell = request.form.get["number"]
+        shares_sell = int(request.form.get["number"])
 
-        shares_own = db.execute("SELECT SUM(shares) FROM buy WHERE user_id=? AND stock=?", user_id, symbol)
+        shares_own = db.execute("SELECT SUM(shares) FROM buy WHERE user_id=? AND stock=?", user_id, symbol)[0]["SUM(shares)"]
 
         if shares_sell > shares_own:
             return apology("You don't have that mach shares", 403)
@@ -258,4 +258,11 @@ def sell():
         db.execute("INSERT INTO sell (user_id,stock,price,shares) VALUES (?,?,?,?)", user_id, symbol, price, shares_sell)
 
         # Update users table
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", left_cash, user_id)
+        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", price*shares_sell, user_id)
+
+        return redirect("/")
+
+    elif request.method == "GET":
+
+        db.execute("")
+        return render_template("/sell.html", )
