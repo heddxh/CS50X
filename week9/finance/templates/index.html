@@ -19,14 +19,14 @@
             <tr>
                 <td>{{ symbol }}</td>
                 <td>{{ name }}</td>
-                <td>{{ number }}</td>
+                <td>{{ shares }}</td>
                 <td>{{ price | usd }}</td>
-                <td>{{ prize * number | usd }}</td>
+                <td>{{ prize * shares | usd }}</td>
             </tr>
         </tbody>
         <tfoot>
             <td>{{ cash_left }}</td>
-            <td>{{ (cash_left + prize * number) | usd }}</td>
+            <td>{{ (cash_left + prize * shares) | usd }}</td>
         </tfoot>
 
     </table>
