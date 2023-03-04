@@ -8,11 +8,11 @@
     <table class="table">
         <thead>
             <tr>
-                <td>Symbol</td>
-                <td>Name</td>
-                <td>Shares</td>
-                <td>Price</td>
-                <td>Total</td>
+                <th scope="col">Symbol</th>
+                <th scope="col">Name</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
             </tr>
         </thead>
         <tbody>
@@ -30,11 +30,11 @@
 
     <table class="table">
         <tr>
-            <th>Cash Left</th>
-            <td>{{ cash_left | usd }}</td>
+            <th scope="raw">Cash Left</th>
+            <td >{{ cash_left | usd }}</td>
         </tr>
         <tr>
-            <th>Total</th>
+            <th scope="raw">Total</th>
             <td>{{ total | usd }}</td>
         </tr>
     </table>
