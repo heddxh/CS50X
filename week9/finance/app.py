@@ -60,7 +60,7 @@ def index():
 
     cash_left = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
     total += cash_left
-    
+
     return render_template("index.html", stocks=stocks, cash_left=cash_left, total=total)
 
 
@@ -237,4 +237,14 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+
+    if request.method == "POST":
+
+        if not request.form.get["symbol"]:
+            return apology("please provide a valid stock symbol you owned", 403)
+
+        symbol = request.form.get["symbol"]
+        shares_sell = request.form.get["number"]
+
+        shares_own = db.execute("SELECT )
+        if

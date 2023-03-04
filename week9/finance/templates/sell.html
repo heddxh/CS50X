@@ -15,4 +15,14 @@
         <li><a class="dropdown-item" href="#">Something else here</a></li>
         </ul>
     </div>
+
+    <form action="/sell", method="post">
+        <select name="symbol">
+            <option disabled selected>Symbol</option>
+            {% for stock in stocks %}
+                <option value="{{ stock.symbol }}">{{ stock.symbol }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Sell</button>
+    </form>
 {% endblock %}
