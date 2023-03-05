@@ -120,11 +120,14 @@ def history():
     history = []
 
     for row in rows:
+        shares = row["shares"]
+        if shares > 0:
+            item["type"] = "
         item = {
             "symbol": row["stock"],
-            "name":
+            # "name":
             "time": row["timestamp"],
-            "shares": row["shares"],
+            "shares": abs(row["shares"]),
             "price": row["price"]
         }
 
