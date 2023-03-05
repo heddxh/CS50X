@@ -124,8 +124,8 @@ def history():
             "symbol": row["stock"],
             "name":
             "time": row["timestamp"],
-            "shares: row["shares"],
-            "price": row
+            "shares": row["shares"],
+            "price": row["price"]
         }
 
 
