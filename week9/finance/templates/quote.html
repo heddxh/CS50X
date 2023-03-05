@@ -52,7 +52,7 @@
             let fetchPromice = fetch("/quote", {
                 method: 'POST',
                 body: JSON.stringify(data)
-                };)
+                });
             fetchPromice
                 .then( response => {
                     if(response.status == "403")
