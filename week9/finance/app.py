@@ -121,7 +121,7 @@ def history():
 
     for row in rows:
         item = {}
-        shares = row["shares"]
+        shares = int(row["shares"])
         if shares > 0:
             item["type"] = "Buy"
         else:
