@@ -127,13 +127,13 @@ def history():
         else:
             item["type"] = "Sell"
 
-        item.update(
-            "symbol" = row["stock"],
+        item.update({
+            "symbol": row["stock"],
             # "name":
-            "time" = row["timestamp"],
-            "shares" = abs(shares),
-            "price" = row["price"]
-        )
+            "time": row["timestamp"],
+            "shares": abs(shares),
+            "price": row["price"]
+        })
         history.append(item)
 
     return render_template("history.html", history=history)
