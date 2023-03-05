@@ -73,7 +73,7 @@ def buy():
 
         # Ensure input not empty
         if not request.form.get("symbol") or not request.form.get("shares"):
-            return apology("please provide stock symbol and its number", 403)
+            return apology("please provide stock symbol and its number", 400)
 
         symbol = request.form.get("symbol")
         number = int(request.form.get("shares"))
@@ -81,12 +81,12 @@ def buy():
 
         # Ensure stock symbol is valid(exist)
         if response == None:
-            return apology(symbol + " do not exist or something went wrong", 403)
+            return apology(symbol + " do not exist or something went wrong", 400)
 
         # Ensure number is valid
         # 交给 HTML 元素确保输入为整数
         if number <= 0:
-            return apology("please provide a positive integer", 403)
+            return apology("please provide a positive integer", 400)
 
         # Check user's cash
         price_per = response["price"]
@@ -266,7 +266,7 @@ def sell():
     if request.method == "POST":
 
         if not request.form.get("symbol"):
-            return apology("please provide a valid stock symbol you owned", 403)
+            return apology("please provide a valid stock symbol you owned", 400)
 
         symbol = request.form.get("symbol")
         shares_sell = int(request.form.get("shares"))
@@ -274,7 +274,7 @@ def sell():
         shares_own = db.execute("SELECT SUM(shares) FROM history WHERE user_id=? AND stock=?", user_id, symbol)[0]["SUM(shares)"]
 
         if shares_sell > shares_own:
-            return apology("You don't have that mach shares", 403)
+            return apology("You don't have that mach shares", 400)
 
         price = lookup(symbol)["price"]
 
