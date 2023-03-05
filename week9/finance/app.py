@@ -236,12 +236,12 @@ def register():
         # Ensure password is not empty
         if not request.form.get("password"):
             return apology("please provide password", 403)
-        elif not request.form.get("confirm"):
+        elif not request.form.get("confirmation"):
             return apology("please repeat your password", 403)
 
         # Ensure confirm is the same with the password
         password = request.form.get("password")
-        confirm = request.form.get("confirm")
+        confirm = request.form.get("confirmation")
         if password != confirm:
             return apology("the second input of password is not the same with the first", 403)
 
