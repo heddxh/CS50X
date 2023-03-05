@@ -128,6 +128,7 @@ def history():
             item["type"] = "Sell"
 
         item = {
+            "type" : ,
             "symbol": row["stock"],
             # "name":
             "time": row["timestamp"],
