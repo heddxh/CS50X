@@ -55,7 +55,7 @@
                 });
             fetchPromice
                 .then( response => {
-                    if(response.status == "403")
+                    if(response.status == "400")
                     {
                         window.location = response.url;
                     }
