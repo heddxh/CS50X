@@ -115,8 +115,18 @@ def history():
     """Show history of transactions"""
 
     user_id = session["user_id"]
+    rows = db.execute("SELECT * FROM history WHERE user_id = ? ORDER BY timestamp DESC", user_id)
 
-    db.execute("SELECT * FROM history WHERE user_id = ?", user_id)
+    history = []
+
+    for row in rows:
+        item = {
+            "symbol": row["stock"],
+            "name":
+            "time": row["timestamp"],
+            "shares: row["shares"],
+            "price": row
+        }
 
 
 @app.route("/login", methods=["GET", "POST"])
