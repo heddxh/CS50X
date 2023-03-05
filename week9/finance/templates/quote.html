@@ -46,7 +46,7 @@
             name.innerHTML = "";
             price.innerHTML = "";
             load.style.visibility = "visible";
-            const data = {
+            let postBody = {
                 symbol: 'aapl'
             };
             let fetchPromice = fetch("/quote", {
@@ -54,7 +54,7 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(postBody)
                 });
             fetchPromice
                 .then( response => {
