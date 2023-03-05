@@ -51,6 +51,9 @@
             };
             let fetchPromice = fetch("/quote", {
                 method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
                 body: data
                 });
             fetchPromice
