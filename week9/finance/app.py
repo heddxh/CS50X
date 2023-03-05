@@ -226,18 +226,18 @@ def register():
 
         # Ensure username is not empty
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # Ensure username do not exist
         username = request.form.get("username")
         if db.execute("SELECT * FROM users WHERE username = ?", username):
-            return apology("username already exists", 403)
+            return apology("username already exists", 400)
 
         # Ensure password is not empty
         if not request.form.get("password"):
-            return apology("please provide password", 403)
+            return apology("please provide password", 400)
         elif not request.form.get("confirmation"):
-            return apology("please repeat your password", 403)
+            return apology("please repeat your password", 400)
 
         # Ensure confirm is the same with the password
         password = request.form.get("password")
