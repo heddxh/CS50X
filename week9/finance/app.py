@@ -122,14 +122,20 @@ def history():
     for row in rows:
         shares = row["shares"]
         if shares > 0:
-            item["type"] = "
+            item["type"] = "Buy"
+        else:
+            item["type"] = "Sell"
+
         item = {
             "symbol": row["stock"],
             # "name":
             "time": row["timestamp"],
-            "shares": abs(row["shares"]),
+            "shares": abs(shares),
             "price": row["price"]
         }
+        history.append(item)
+
+    return render_template("history.html", history=history)
 
 
 @app.route("/login", methods=["GET", "POST"])
