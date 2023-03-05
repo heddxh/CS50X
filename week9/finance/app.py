@@ -120,6 +120,7 @@ def history():
     history = []
 
     for row in rows:
+        item = {}
         shares = row["shares"]
         if shares > 0:
             item["type"] = "Buy"
