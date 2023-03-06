@@ -1,4 +1,5 @@
 import os
+import json
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -186,13 +187,6 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
-@app.route("/quote-data", methods=["GET", "POST"])
-def test():
-    return request.form
-
-
-
-
 
 @app.route("/quote", methods=["GET", "POST"])
 @login_required
@@ -205,6 +199,7 @@ def quote():
 
     elif request.method == "POST":
 
+        json = json.request.form
         if not request.form.get("symbol"):
             print(request.form)
             return apology("please provide stock symbol", 400)
@@ -217,7 +212,6 @@ def quote():
             else:
                 responce["price"] = usd(responce["price"])
                 return responce
-
 
 
 @app.route("/_quote_data", methods=["GET"])
