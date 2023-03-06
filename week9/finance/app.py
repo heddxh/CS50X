@@ -200,10 +200,10 @@ def quote():
     elif request.method == "POST":
 
         json_req = json.dump(request.form)
-        if not json("symbol"):
+        if not json_req("symbol"):
             return apology("please provide stock symbol", 400)
         else:
-            symbol = json("symbol")
+            symbol = json_req("symbol")
             responce = lookup(symbol) # API
 
             if responce == None:
