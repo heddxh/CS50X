@@ -186,9 +186,16 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
+@app.route("/quote-data", methods=["GET", "POST"])
+def test():
+    return request.form
+
+
+
+
 
 @app.route("/quote", methods=["GET", "POST"])
-#@login_required
+@login_required
 def quote():
     """Get stock quote."""
 

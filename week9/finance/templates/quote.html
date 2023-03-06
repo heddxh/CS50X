@@ -49,12 +49,12 @@
             let postBody = {
                 symbol: 'aapl',
             };
-            let fetchPromice = fetch("/quote", {
+            let fetchPromice = fetch("/quote-data", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: '{"hello": "world"}'
+                body: JSON.stringify(postBody)
                 });
             fetchPromice
                 .then( response => {
