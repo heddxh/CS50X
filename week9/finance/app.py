@@ -199,7 +199,7 @@ def quote():
 
     elif request.method == "POST":
 
-        json = json.request.form
+        json_req = json.dump(request.form)
         if not json("symbol"):
             return apology("please provide stock symbol", 400)
         else:
