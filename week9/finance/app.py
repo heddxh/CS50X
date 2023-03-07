@@ -76,8 +76,12 @@ def buy():
         if not request.form.get("symbol") or not request.form.get("shares"):
             return apology("please provide stock symbol and its number", 400)
 
+        number = request.form.get("shares")
+
+        if not isinstance(numebr, int):
+            return apology("please provide a positivy integer", 400)
+
         symbol = request.form.get("symbol")
-        number = int(request.form.get("shares"))
         response =lookup(symbol)
 
         # Ensure stock symbol is valid(exist)
