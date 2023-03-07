@@ -240,7 +240,7 @@ def register():
         password = request.form.get("password")
         confirm = request.form.get("confirmation")
         if password != confirm:
-            return apology("the second input of password is not the same with the first", 403)
+            return apology("the second input of password is not the same with the first", 40)
 
         # Insert into the database
         hash = generate_password_hash(password)
