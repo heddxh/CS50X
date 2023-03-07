@@ -46,9 +46,7 @@
             name.innerHTML = "";
             price.innerHTML = "";
             load.style.visibility = "visible";
-            let postBody = {
-                symbol: input.value,
-            };
+            let postBody = "symbol=input.value";
             let fetchPromice = fetch("/quote", {
                 method: 'POST',
                 headers: {
