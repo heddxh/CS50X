@@ -78,7 +78,7 @@ def buy():
 
         number = request.form.get("shares")
 
-        if not isinstance(numebr, int):
+        if not isinstance(number, int):
             return apology("please provide a positivy integer", 400)
 
         symbol = request.form.get("symbol")
@@ -244,7 +244,7 @@ def register():
         password = request.form.get("password")
         confirm = request.form.get("confirmation")
         if password != confirm:
-            return apology("the second input of password is not the same with the first", 40)
+            return apology("the second input of password is not the same with the first", 400)
 
         # Insert into the database
         hash = generate_password_hash(password)
