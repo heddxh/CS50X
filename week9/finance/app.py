@@ -199,7 +199,6 @@ def quote():
 
     elif request.method == "POST":
 
-        # json_req = json.loads(request.get_data(as_text=True))
         if not request.form.get("symbol"):
             return apology("please provide stock symbol", 400)
         else:
@@ -208,25 +207,6 @@ def quote():
 
             if responce == None:
                 return apology(symbol + " do not exist or something went wrong", 400)
-            else:
-                responce["price"] = usd(responce["price"])
-                return responce
-
-
-@app.route("/_quote_data", methods=["GET"])
-@login_required
-def quote_data():
-
-    if request.method == "GET":
-
-        if not request.args.get("symbol"):
-            return apology("please provide stock symbol", 403)
-        else:
-            symbol = request.args.get("symbol")
-            responce = lookup(symbol) # API
-
-            if responce == None:
-                return apology(symbol + " do not exist or something went wrong", 403)
             else:
                 responce["price"] = usd(responce["price"])
                 return responce
