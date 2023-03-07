@@ -47,14 +47,15 @@
             price.innerHTML = "";
             load.style.visibility = "visible";
             let postBody = {
-                symbol: 'aapl',
+                symbol: input.value,
             };
             let fetchPromice = fetch("/quote", {
                 method: 'POST',
-                headers: {
+                /*headers: {
                     'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(postBody)
+                },*/
+                // body: JSON.stringify(postBody)
+                body: postBody
                 });
             fetchPromice
                 .then( response => {
