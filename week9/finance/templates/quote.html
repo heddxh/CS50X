@@ -46,14 +46,16 @@
             name.innerHTML = "";
             price.innerHTML = "";
             load.style.visibility = "visible";
-            let postBody = "symbol=input.value";
+
+            let postBody = `symbol=${input.value}`;
+            let searchParams = new URLSearchParams(postBody);
+
             let fetchPromice = fetch("/quote", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                // body: JSON.stringify(postBody)
-                body: symbol=input.value
+                body: searchParams
                 });
             fetchPromice
                 .then( response => {
