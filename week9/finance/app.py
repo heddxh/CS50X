@@ -199,11 +199,11 @@ def quote():
 
     elif request.method == "POST":
 
-        json_req = json.loads(request.get_data(as_text=True))
-        if not json_req["symbol"]:
+        # json_req = json.loads(request.get_data(as_text=True))
+        if not request.form.get("symbol"):
             return apology("please provide stock symbol", 400)
         else:
-            symbol = json_req["symbol"]
+            symbol = request.form.get("symbol")
             responce = lookup(symbol) # API
 
             if responce == None:
